@@ -1,0 +1,12 @@
+/* Styling for the navigation bar */
+nav {
+    background-color: rgb(224, 224, 224) /* Same until next section */
+}
+nav ul {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+}
