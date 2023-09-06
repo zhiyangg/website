@@ -5,8 +5,10 @@
 
 /* Left */
 #left-container {
-    padding: 20px; 
     border-right: 2px solid #333; 
+}
+#about-me-left {
+    margin-top: 50px;
 }
 #about-me-left img {
     width: 200px; 
@@ -16,14 +18,17 @@
     border-radius: 50%; /* Make the image a circle */
     object-fit: cover; /* Maintain the image's aspect ratio and center it both horizontally and vertically */
 }
-#about-me-left h1 {
-    font-size: 36px; 
+#about-me-left h2 {
+    margin: 15px 0;
+    font-size: 32px; 
     color: #333; 
-}
-#about-me-left p {
-    font-size: 18px; 
-    color: #555; 
 }
 
 /* Right */
-
+#about-me-right {
+    margin-top: 50px;
+}
+#about-me-right p {
+    font-size: 18px; 
+    color: #555; 
+}
