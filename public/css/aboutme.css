@@ -4,31 +4,24 @@
 }
 
 /* Left */
-#left-container {
-    border-right: 2px solid #333; 
-}
 #about-me-left {
-    margin-top: 50px;
+    margin-top: 5em;
 }
 #about-me-left img {
-    width: 200px; 
-    height: 200px; 
+    width: 22rem; 
+    height: 22rem; 
     display: block; /* Remove any extra spacing around the image */
     margin: 0 auto; /* Center the image horizontally */
     border-radius: 50%; /* Make the image a circle */
     object-fit: cover; /* Maintain the image's aspect ratio and center it both horizontally and vertically */
 }
-#about-me-left h2 {
-    margin: 15px 0;
-    font-size: 32px; 
-    color: #333; 
-}
 
 /* Right */
 #about-me-right {
-    margin-top: 50px;
+    margin-top: 5em;
 }
 #about-me-right p {
-    font-size: 18px; 
+    margin: 3em;
+    font-size: 1em; 
     color: #555; 
 }
