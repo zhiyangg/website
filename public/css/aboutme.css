@@ -3,32 +3,31 @@ body {
     margin: 0;
     padding: 0;
 }
+
 #about-me {
     background-color: #f8f8f8; 
-    margin: 0;
-    padding: 0;
     min-height: 100vh;
+    display: flex; /* Utilize flexbox to center the content */
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
 }
-
-/* Left */
-#about-me-left {
-    margin-top: 5em;
-}
-#about-me-left img {
-    width: 22rem; 
-    height: 22rem; 
+#about-me img {
+    width: 25rem; 
+    height: 25rem; 
     display: block; /* Remove any extra spacing around the image */
     margin: 0 auto; /* Center the image horizontally */
     border-radius: 50%; /* Make the image a circle */
     object-fit: cover; /* Maintain the image's aspect ratio and center it both horizontally and vertically */
 }
-
-/* Right */
-#about-me-right {
-    margin-top: 5em;
+#about-me h1 {
+    margin-top: 1em; 
 }
-#about-me-right p {
-    margin: 3em;
+#about-me p {
+    margin: 1em 0; 
     font-size: 1em; 
     color: #555; 
+}
+#about-me button {
+    margin-top: 1em; 
 }
