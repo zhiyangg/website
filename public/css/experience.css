@@ -1,17 +1,17 @@
 /* General */
-#experience-container {
+#experience {
     background-color: #4d3a3a;
     min-height: 90vh; 
 }
-#experience-container h2 {
+#experience h2 {
     font-size: 40px;
     margin: 4rem 0;
     text-align: center;
 }
-.inside-container {
+#experience .inside-container {
     display: flex;
-    align-items: center;
-    gap: 5px;
+    justify-content: space-evenly;
+    gap: 8px;
     margin: 1rem; 
 }
 
