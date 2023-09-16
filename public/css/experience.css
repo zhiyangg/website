@@ -2,54 +2,47 @@
 #experience-container {
     background-color: #811212;
     min-height: 80vh; 
-    display: flex;
-    white-space: nowrap; /* Prevent card stacking */
 }
 #experience-container h2 {
     margin: 4rem 0;
     text-align: center;
 }
-#inside-container {
+.inside-container {
     display: flex;
-    align-items: center; 
-    margin: 2em; 
+    margin: 1rem; 
     border: 1px solid #ccc;
-    border-radius: 15px;
 }
 
 /* Style for each job card */
-#job-experience {
-    width: 24em; 
-    height: 30em; 
+.job-experience {
+    width: 30vw; 
+    height: 60vh; 
     margin: 0 auto; /* Horizontally centers the element */
-    padding: 20px;
     border-radius: 15px;
     background-color: #fff;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
 }
-#job-experience .job-img {
-    max-width: 100%; 
+.job-experience .job-img {
+    width: 100%; 
     height: 50%; 
     display: block; /* Center the image within its container */
     margin: 0 auto; 
 }
-#job-experience h3 {
+.job-experience h3 {
     font-size: 18px;
     font-weight: bold;
     margin: 1rem auto;
     color: #333; 
 }
-#job-experience .job-date {
+.job-experience .job-date {
     font-size: 14px;
     color: #777;
 }
-#job-experience .job-company {
+.job-experience .job-company {
     font-size: 14px;
     color: #555; 
 }
-#job-experience .job-description {
+.job-experience .job-description {
     font-size: 14px;
-    color: #666; 
-    overflow-wrap: break-word; /* Allow text to wrap within the card */
+    color: #666;
 }
