@@ -1,3 +1,6 @@
-#navbar {
-    border-bottom: 2px solid #333; /* Adjust the width and color of the border as needed */
+.nav-link {
+    transition: all 0.5s;
+}
+.nav-link:hover  {
+    text-decoration: underline;
 }
