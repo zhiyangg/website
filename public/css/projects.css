@@ -1,10 +1,11 @@
 /* General */
 #projects {
-    background-color: #2bb3aa;
+    background-color: rgb(63, 114, 175);
     min-height: 95vh; 
 }
 #projects h2 {
     font-size: 40px;
+    font-weight: bold;
     margin: 4rem 0;
     text-align: center;
 }
@@ -19,8 +20,11 @@
     max-width: 30vw; 
     min-height: 65vh; 
     border-radius: 15px;
-    background-color: #fff;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    transition: all 0.5s;
+}
+.project-experience:hover {
+    box-shadow: -6px 6px 0 0px rgba(40, 80, 120, 0.5);
 }
 .project-experience .project-img {
     width: 100%; 
@@ -34,12 +38,12 @@
     font-weight: bold;
     margin: 1rem auto;
     padding: 0 20px;
-    color: #333; 
+    color: rgb(51, 51, 51); 
 }
 .project-experience .project-author {
     font-size: 14px;
     padding: 0 20px;
-    color: #777;
+    color: rgb(119, 119, 119);
 }
 .project-experience .project-description {
     font-size: 14px;
@@ -47,7 +51,10 @@
 }
 .project-experience .project-links {
     font-size: 14px;
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 0 20px;
+}
+.project-experience .project-links:hover {
+    text-decoration: underline;
 }

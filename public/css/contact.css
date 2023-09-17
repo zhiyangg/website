@@ -1,22 +1,29 @@
 /* General */
 #contact {
-    background-color: #ffffff;
+    background-color: rgb(17, 45, 78);
     min-height: 50vh; 
 }
 #contact h2 {
+    color: rgb(219, 226, 239);
     font-size: 40px;
     margin-top: 4rem;
     text-align: center;
 }
 #contact .email {
+    color: rgb(219, 226, 239);
     font-size: 20px;
     text-align: center;
+    text-decoration: none;
+}
+#contact .email:hover {
+    text-decoration: underline;
 }
 #contact .icons {
     display: flex;
-    gap: 8px;
+    gap: 3rem;
     justify-content: center;
+}
+#contact .icons-link {
     font-size: 40px;
-    color: black;
-    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
