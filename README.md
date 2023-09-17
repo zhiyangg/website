@@ -1,3 +1,3 @@
 # Personal Website
 
-Welcome to my personal website! This website is a showcase of my interests, skills, and experiences.
+This is my personal website that displays all of my experiences and projects that I have worked on in the past. 
