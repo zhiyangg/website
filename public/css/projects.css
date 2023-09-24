@@ -18,7 +18,7 @@
 /* Style for each job card */
 .project-experience {
     max-width: 30vw; 
-    min-height: 65vh; 
+    min-height: 70vh; 
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     transition: all 0.5s;
