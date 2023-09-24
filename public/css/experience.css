@@ -18,8 +18,8 @@
 
 /* Style for each job card */
 .job-experience {
-    width: 23vw; 
-    min-height: 70vh; 
+    width: 26vw; 
+    height: 65vh; 
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     transition: all 0.5s;
