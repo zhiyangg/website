@@ -18,7 +18,7 @@ export default function Home() {
                     <h2>Zhi Yang Chen</h2>
                 </div>
                 <div className={styles.body}>
-                    <p>Junior Software Engineer</p>
+                    <p>Software Engineer</p>
                     <p>Computer Engineering Student at the University of Toronto</p>
                 </div>
             </div>
