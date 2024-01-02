@@ -9,7 +9,7 @@
 .outerCard {
     display: flex;
     justify-content: center;
-    background-color: aquamarine;
+    background-color: lightgrey;
     padding: 1rem 2rem;
 }
 .innerCard {
@@ -24,12 +24,12 @@
 
 .imageCard {
     position: relative;
-    flex: 2; /* 2/5 w.r.t main */
+    flex: 2; /* 2/6 w.r.t main */
     background-color: white;
 }
 
 .body {
-    flex: 3; /* 3/5 w.r.t main */
+    flex: 4; /* 4/6 w.r.t main */
     display: flex;
     background-color: blueviolet;
     padding: 2rem 0 2rem 2rem;
