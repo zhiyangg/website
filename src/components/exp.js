@@ -2,21 +2,22 @@ import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/exp.module.css'; 
 
-export default function exp({position, company, startDate, endDate, description, imgPath, imgAlt}) {
+export default function exp({position, company, startDate, endDate, description, imgPath, imgAlt, linkURL}) {
     return (
         <main>
             <div className={styles.outerCard}>
                 <div className={styles.innerCard}>
-                    <div className={styles.image}>
-                        <Image 
-                            src={imgPath}
-                            alt={imgAlt}
-                            layout='responsive'
-                            width={1}
-                            height={1}
-                        />
+                    <div className={styles.imageCard}>
+                        <div className={styles.image}>
+                            <Image 
+                                src={imgPath}
+                                alt={imgAlt}
+                                layout='fill'
+                                objectFit='contain'
+                            />
+                        </div>
                     </div>
-
+                    
                     <div className={styles.body}>
                         <div className={styles.text}>
                             <div className={styles.posiiton}>
@@ -28,6 +29,8 @@ export default function exp({position, company, startDate, endDate, description,
                             </div>
                             <div className={styles.description}>
                                 <p>{description}</p>
+                                <br></br>
+                                <a href={linkURL} target='blank'>Link</a>
                             </div>
                         </div>
                     </div>

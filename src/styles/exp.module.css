@@ -18,11 +18,14 @@
     background-color: black;
     padding: 1rem;
     border-radius: 2rem;
-    max-height: min-content;
+    height: 50vh;
+    width: 80vw;
 }
 
-.image {
+.imageCard {
+    position: relative;
     flex: 2; /* 2/5 w.r.t main */
+    background-color: white;
 }
 
 .body {

@@ -30,7 +30,7 @@ export default function Home() {
                 alt="Profile Image"
                 layout="responsive"
                 width={1} 
-                height={1} 
+                height={1}
             />
         </div>
     </main>
