@@ -1,0 +1,21 @@
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    background-color: grey;
+}
+
+.header {
+    flex: 3;
+    background-color: aqua;
+    padding-left: 2rem;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0;
+}

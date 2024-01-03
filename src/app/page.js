@@ -2,21 +2,25 @@ import React from 'react';
 
 import Home from '../components/home';
 import Navbar from '../components/navbar'; 
+import About from '../components/about';
 import Header from '../components/header';
 import Exp from '../components/exp';
 import Project from '../components/project';
+import Contact from '../components/contact';
 
 import './globals.css';
-import Head from 'next/head';
 
 const Page = () => {
   return (
     <main>
         {/* Home Page */}
         <Home />
+        <Navbar />
+
+        {/* About */}
+        <About />
 
         {/* Experience  */}
-        <Navbar />
         <Header title="Experience"/>
         <Exp 
             position="Junior Tolling Field Technician"
@@ -130,7 +134,7 @@ const Page = () => {
         />
 
         {/* Contact */}
-        <Header title="Contact Me"/>
+        <Contact />
     </main>
   );
 };

@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import styles from '../styles/navbar.module.css';
 
-const Navbar = () => {
+export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
@@ -23,6 +22,4 @@ const Navbar = () => {
       </ul>
     </nav>
   );
-};
-
-export default Navbar;
+}
