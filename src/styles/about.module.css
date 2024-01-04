@@ -1,7 +1,16 @@
 .card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
+    background-color: #e0ddd2;
+}
+
+.body p {
+    padding: 1rem;
+    font-size: 2rem;
+    color: black;
+    font-weight: 500;
 }

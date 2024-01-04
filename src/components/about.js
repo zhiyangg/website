@@ -6,12 +6,11 @@ export default function About() {
     return (
         <main>
             <div className={styles.card}>
-                <div className={styles.header}>
-                    <h2>About Me</h2>
-                </div>
-            </div>
-            <div className={styles.body}>
-                <p ></p>
+                <div className={styles.body}>
+                    <p>Hi, I'm Zhi Yang Chen, a third year Computer Engineering student at the University of Toronto. </p>
+                    <p>Being immersed in the world of computer engineering, I am passionate about creating innovative software solutions </p>
+                    <p>Outside academia, my world revolves around my dog and sport cars, especially the engineering marvels from Porsche </p>
+                </div>  
             </div>
         </main>
     );

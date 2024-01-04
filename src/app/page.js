@@ -15,12 +15,13 @@ const Page = () => {
     <main>
         {/* Home Page */}
         <Home />
-        <Navbar />
-
+        
         {/* About */}
+        <Header title="About Me"/>
         <About />
 
         {/* Experience  */}
+        <Navbar />
         <Header title="Experience"/>
         <Exp 
             position="Junior Tolling Field Technician"
@@ -117,19 +118,19 @@ const Page = () => {
         <Project 
             position="Threads & Process Manager"
             software="C, Linux, Virtual Machines"
-            description="As a part of our Software Design & Communications course, we have developed 
-                a user friendly Geographic Information System (GIS) with a wide array of features to 
-                provide a comprehensive solution for all navigation needs."
+            description="In our Operating Systems course, we integrated advanced synchronization mechanisms 
+                using C for hash table operations. This involved employing pthread mutexes to ensure thread-safe 
+                data access and modification in a multi-threaded environment."
             imgPath="/img/project/otfmap.png"
             imgAlt="Threads and Process Manager image"
         />
         <Project 
             position="16-bit Enhanced Processor"
             software="Verilog (HDL), Assembly, ModelSim"
-            description="As a part of our Software Design & Communications course, we have developed 
-                a user friendly Geographic Information System (GIS) with a wide array of features to 
-                provide a comprehensive solution for all navigation needs."
-            imgPath="/img/project/otfmap.png"
+            description="In our Computer Organization course, we developed a 16-bit processor featuring 
+                8 registers, capable of executing instructions like mov, movt, add, sub, ldr, str, and b. 
+                For debugging, we used ModelSim's FSM timing diagram, enhancing the ALU for add, sub, and and operations."
+            imgPath="/img/project/processor.png"
             imgAlt="Enhanced Processor image"
         />
 
