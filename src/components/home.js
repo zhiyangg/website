@@ -21,6 +21,9 @@ export default function Home() {
                     <p>Software Engineer</p>
                     <p>Computer Engineering Student at the University of Toronto</p>
                 </div>
+                <div className={styles.resume}>
+                    <a href='/img/resume.pdf' target="_blank">Resume</a>
+                </div>
             </div>
         </div>
 
