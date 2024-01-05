@@ -22,7 +22,7 @@ export default function Home() {
                     <p>Computer Engineering Student at the University of Toronto</p>
                 </div>
                 <div className={styles.resume}>
-                    <a href='/img/resume.pdf' target="_blank">Resume</a>
+                    <a href='/public/img/resume.pdf' target="_blank">Resume</a>
                 </div>
             </div>
         </div>
