@@ -21,20 +21,17 @@ const Page = () => {
             <About />
 
             {/* Experience  */}
-            
-            
             <Header title="Experience"/>
             <Exp 
                 position="Junior Tolling Field Technician"
                 company="407 ETR Concession Company Limited"
                 startDate="May 2023"
                 endDate="Sep 2023"
-                description="As a Junior Tolling Field Technician at 407 ETR, 
-                    I maintained and improved tolling equipment through regular inspections, 
-                    diagnostics, and adjustments, ensuring high operational efficiency. My 
-                    involvement in the East Detolling project contributed to the successful 
-                    decommissioning of legacy sites and the establishment of new ones, 
-                    significantly enhancing tolling efficiency"
+                description={[
+                    "Maintained tolling equipment through detailed inspections, diagnostics, and adjustments, securing a 98% peak performance rate and guaranteeing a 99.5% uninterrupted tolling operation",
+                    "Conducted exhaustive testing of tolling equipment in a controlled laboratory environment, proactively resolving technical issues to maintain a 98% data transmission reliability rate",
+                    "Assisted in the East Detolling project, decommissioning 22 legacy sites and establishing 6 new sites, resulting in a 10% improvement in tolling efficiency"
+                ]}
                 imgPath="/img/exp/407etr.jpeg"
                 imgAlt="407 ETR image"
                 linkURL="https://www.407etr.com/en/index.html"
@@ -44,8 +41,10 @@ const Page = () => {
                 company="Blue Sky Solar Racing"
                 startDate="Sep 2022"
                 endDate="Sep 2023"
-                description="Proficient in soldering and testing circuit boards for electrical 
-                    systems, collaborating within other teams to ensure optimal functionality."
+                description={[
+                    "Proficiently soldered and tested circuit boards, ensuring a high degree of performance and reliability for various electronic applications, improving the team’s electrical systems",
+                    "Utilized Altium Designer to design PCB layouts, create component libraries, and develop schematics for various solarcar electrical systems, contributing to system functionality and advancements"
+                ]}
                 imgPath="/img/exp/bssr.png"
                 imgAlt="Blue Sky Solar Racing image"
                 linkURL="https://www.blueskysolar.org/team"
@@ -55,11 +54,11 @@ const Page = () => {
                 company="City of Markham"
                 startDate="May 2022"
                 endDate="Sep 2022"
-                description="As Park Operations employee ar the City of Markham, I managed a 
-                    comprehensive maintenance schedule, liaising with regional managers and community 
-                    members to uphold the beauty and cleanliness of city parks. I am skilled in 
-                    operating a diverse array of equipment such as zero-turn lawn mowers, 
-                    push mowers, trimmers, and blowers"
+                description={[
+                    "Managed a schedule of regular park maintenance, coordinating with regional managers and city residents to preserve city parks and ensure cleanliness",
+                    "Operated and utilized a variety of equipment, including zero-turn lawn mowers, push mowers, trimmers, and blowers, to efficiently complete tasks",
+                    "Actively contributed to the development and implementation of new park maintenance procedures and policies, improving the efficiency and effectiveness of city park operations"
+                ]}
                 imgPath="/img/exp/cityofmarkham.png"
                 imgAlt="City of Markham image"
                 linkURL="https://www.markham.ca/wps/portal/home"
@@ -69,13 +68,11 @@ const Page = () => {
                 company="Community Engagement and Family Support Centre"
                 startDate="Jul 2021"
                 endDate="Aug 2021"
-                description="In my role as a Program Coordinator for the Community Engagement 
-                    and Family Support Centre, I organized daily activities and special events for 
-                    a summer camp, catering to a diverse group of 30 campers. My responsibilities 
-                    included crafting a dynamic activity schedule that addressed varied interests 
-                    and needs, spanning online engagements, arts and crafts, and sports. Collaborating 
-                    closely with camp directors, I helped to uphold and further the camp's vision and mission,
-                    creating an enriching environment for all participants."
+                description={[
+                    "Orchestrated daily activities and special events for a summer camp of 30 campers, encompassing online engagements, arts, crafts, and sports",
+                    "Devised a versatile activity schedule, catering to the diverse preferences and requirements of the campers",
+                    "Partnered with camp directors to shape and uphold the camp's overarching vision and mission"
+                ]}
                 imgPath="/img/exp/cefs.jpeg"
                 imgAlt="CEFS image"
                 linkURL="https://cefscentre.org/en/"
@@ -85,8 +82,11 @@ const Page = () => {
                 company="Royal Canadian Air Cadets"
                 startDate="Sep 2016"
                 endDate="Jun 2021"
-                description="I led teams in diverse traning activites, including camping and fitness 
-                    testing; Communicating and working alongside CAF officers, staff, and cadets."
+                description={[
+                    "Spearheaded a diverse group of cadets through training programs, encompassing outdoor survival skills, rigorous fitness testing, enhancing team cohesion and resilience",
+                    "Cultivated robust communication channels and collaborated with Canadian Armed Forces (CAF) officers, support staff, and community volunteers, fostering a supportive learning environment",
+                    "Orchestrated the planning and execution of educational workshops and leadership seminars, leading to an increase in cadet engagement and proficiency in leadership competencies."
+                ]}
                 imgPath="/img/exp/rcac.png"
                 imgAlt="Royal Canadian Air Cadets image"
                 linkURL="https://www.351silverstar.com/"
@@ -122,7 +122,7 @@ const Page = () => {
                 description="In our Operating Systems course, we integrated advanced synchronization mechanisms 
                     using C for hash table operations. This involved employing pthread mutexes to ensure thread-safe 
                     data access and modification in a multi-threaded environment."
-                imgPath="/img/project/otfmap.png"
+                imgPath="/img/project/threads.png"
                 imgAlt="Threads and Process Manager image"
             />
             <Project 
