@@ -45,7 +45,7 @@ const Page = () => {
                     "Proficiently soldered and tested circuit boards, ensuring a high degree of performance and reliability for various electronic applications, improving the team’s electrical systems",
                     "Utilized Altium Designer to design PCB layouts, create component libraries, and develop schematics for various solarcar electrical systems, contributing to system functionality and advancements"
                 ]}
-                imgPath="/img/exp/bssr.png"
+                imgPath="/website/img/exp/bssr.png"
                 imgAlt="Blue Sky Solar Racing image"
                 linkURL="https://www.blueskysolar.org/team"
             />
@@ -59,7 +59,7 @@ const Page = () => {
                     "Operated and utilized a variety of equipment, including zero-turn lawn mowers, push mowers, trimmers, and blowers, to efficiently complete tasks",
                     "Actively contributed to the development and implementation of new park maintenance procedures and policies, improving the efficiency and effectiveness of city park operations"
                 ]}
-                imgPath="/img/exp/cityofmarkham.png"
+                imgPath="/website/img/exp/cityofmarkham.png"
                 imgAlt="City of Markham image"
                 linkURL="https://www.markham.ca/wps/portal/home"
             />
@@ -73,7 +73,7 @@ const Page = () => {
                     "Devised a versatile activity schedule, catering to the diverse preferences and requirements of the campers",
                     "Partnered with camp directors to shape and uphold the camp's overarching vision and mission"
                 ]}
-                imgPath="/img/exp/cefs.jpeg"
+                imgPath="/website/img/exp/cefs.jpeg"
                 imgAlt="CEFS image"
                 linkURL="https://cefscentre.org/en/"
             />
@@ -87,7 +87,7 @@ const Page = () => {
                     "Cultivated robust communication channels and collaborated with Canadian Armed Forces (CAF) officers, support staff, and community volunteers, fostering a supportive learning environment",
                     "Orchestrated the planning and execution of educational workshops and leadership seminars, leading to an increase in cadet engagement and proficiency in leadership competencies."
                 ]}
-                imgPath="/img/exp/rcac.png"
+                imgPath="/website/img/exp/rcac.png"
                 imgAlt="Royal Canadian Air Cadets image"
                 linkURL="https://www.351silverstar.com/"
             />
@@ -100,7 +100,7 @@ const Page = () => {
                 description="YelpCamp is a web application that allows users to discover and 
                     review campgrounds. It's a platform where outdoor enthusiasts can share their 
                     favorite camping spots, read and write reviews, and plan their next adventure outdoors."
-                imgPath="/img/project/yelpcamp.png"
+                imgPath="/website/img/project/yelpcamp.png"
                 imgAlt="YelpCamp image"
                 linkURL="https://yelpcamp-4549.onrender.com/"
                 linkText="Demo"
@@ -111,7 +111,7 @@ const Page = () => {
                 description="As a part of our Software Design & Communications course, we have developed 
                     a user friendly Geographic Information System (GIS) with a wide array of features to 
                     provide a comprehensive solution for all navigation needs."
-                imgPath="/img/project/otfmap.png"
+                imgPath="/website/img/project/otfmap.png"
                 imgAlt="OTFMap image"
                 linkURL="https://www.youtube.com/watch?v=OgRmhjl-Iy8"
                 linkText="Demo"
@@ -122,7 +122,7 @@ const Page = () => {
                 description="In our Operating Systems course, we integrated advanced synchronization mechanisms 
                     using C for hash table operations. This involved employing pthread mutexes to ensure thread-safe 
                     data access and modification in a multi-threaded environment."
-                imgPath="/img/project/threads.png"
+                imgPath="/website/img/project/threads.png"
                 imgAlt="Threads and Process Manager image"
             />
             <Project 
@@ -131,7 +131,7 @@ const Page = () => {
                 description="In our Computer Organization course, we developed a 16-bit processor featuring 
                     8 registers, capable of executing instructions like mov, movt, add, sub, ldr, str, and b. 
                     For debugging, we used ModelSim's FSM timing diagram, enhancing the ALU for add, sub, and and operations."
-                imgPath="/img/project/processor.png"
+                imgPath="/website/img/project/processor.png"
                 imgAlt="Enhanced Processor image"
             />
 
