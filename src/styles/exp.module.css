@@ -1,15 +1,11 @@
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
-    height: 100vh;
+    background-color: #BCA37F;
 }
 
 .outerCard {
     display: flex;
     justify-content: center;
-    background-color: lightgrey;
     padding: 1rem 2rem;
 }
 .innerCard {
@@ -19,7 +15,7 @@
     padding: 1rem;
     border-radius: 2rem;
     height: 50vh;
-    width: 80vw;
+    width: 70vw;
 }
 
 .imageCard {
@@ -31,12 +27,13 @@
 .body {
     flex: 4; /* 4/6 w.r.t main */
     display: flex;
-    background-color: blueviolet;
+    background-color: #113946;
     padding: 2rem 0 2rem 2rem;
 }
 .body .container { /* aligning company and date */
     display: flex;
     justify-content: space-between;
+    padding-right: 1rem;
 }
 .body h2 {
     color: white;
@@ -49,6 +46,5 @@
     font-size: 1vw;
 }
 .body p {
-    max-width: 40rem;
     padding: 1.5rem 2rem 0 0;
 }

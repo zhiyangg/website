@@ -1,15 +1,11 @@
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
-    height: 100vh;
+    background-color: #BCA37F;
 }
 
 .outerCard {
     display: flex;
     justify-content: center;
-    background-color: lightgrey;
     padding: 1rem 2rem;
 }
 .innerCard {
@@ -31,7 +27,7 @@
 .body {
     flex: 1; /* 1/2 w.r.t main */
     display: flex;
-    background-color: blue;
+    background-color: #11235A;
     padding: 2rem 0 2rem 2rem;
 }
 .body h2 {

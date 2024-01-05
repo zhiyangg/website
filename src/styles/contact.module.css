@@ -4,12 +4,14 @@
     align-items: center;
     height: 10vh;
     width: 100vw;
-    background-color: grey;
+    background-color: #0F2167;
 }
 
 .header {
     flex: 3;
-    background-color: aqua;
+    color: white;
+    font-size: 1rem;
+    font-weight: lighter;
     padding-left: 2rem;
 }
 
@@ -18,4 +20,6 @@
     display: flex;
     justify-content: space-between;
     padding: 0 2rem 0;
+    color: white;
+    font-weight: lighter;
 }
