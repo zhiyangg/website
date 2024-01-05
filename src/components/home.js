@@ -22,14 +22,14 @@ export default function Home() {
                     <p>Computer Engineering Student at the University of Toronto</p>
                 </div>
                 <div className={styles.resume}>
-                    <a href='/img/resume.pdf' target="_blank">Resume</a>
+                    <a href='/website/img/resume.pdf' target="_blank">Resume</a>
                 </div>
             </div>
         </div>
 
         <div className={styles.image}>
             <Image
-                src="/img/profile.png" 
+                src="/website/img/profile.png" 
                 alt="Profile Image"
                 layout="responsive"
                 width={1} 
