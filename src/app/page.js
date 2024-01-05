@@ -32,7 +32,7 @@ const Page = () => {
                     "Conducted exhaustive testing of tolling equipment in a controlled laboratory environment, proactively resolving technical issues to maintain a 98% data transmission reliability rate",
                     "Assisted in the East Detolling project, decommissioning 22 legacy sites and establishing 6 new sites, resulting in a 10% improvement in tolling efficiency"
                 ]}
-                imgPath="/img/exp/407etr.jpeg"
+                imgPath="/website/img/exp/407etr.jpeg"
                 imgAlt="407 ETR image"
                 linkURL="https://www.407etr.com/en/index.html"
             />
