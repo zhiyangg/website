@@ -4,7 +4,7 @@ import styles from '../styles/exp.module.css';
 
 export default function exp({position, company, startDate, endDate, description, imgPath, imgAlt, linkURL}) {
     return (
-        <main>
+        <main className={styles.main}>
             <div className={styles.outerCard}>
                 <div className={styles.innerCard}>
                     <div className={styles.imageCard}>

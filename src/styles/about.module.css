@@ -4,13 +4,20 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 80vh;
-    background-color: #e0ddd2;
+    height: 100vh;
+    background-color: #EAD7BB;
+    
 }
 
+.body h2 {
+    padding: 1rem;
+    font-size: 4rem;
+    color: black;
+    font-weight: bold;
+}
 .body p {
     padding: 1rem;
     font-size: 2rem;
     color: black;
-    font-weight: 500;
+    font-weight: lighter;
 }

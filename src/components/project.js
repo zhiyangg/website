@@ -4,7 +4,7 @@ import styles from '../styles/project.module.css';
 
 export default function project({position, software, description, imgPath, imgAlt, linkURL, linkText}) {
     return (
-        <main>
+        <main className={styles.main}>
             <div className={styles.outerCard}>
                 <div className={styles.innerCard}>
                     <div className={styles.body}>
