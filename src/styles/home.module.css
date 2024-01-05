@@ -43,3 +43,16 @@
     max-height: 35vw;
     object-fit: cover;
 }
+
+.resume {
+    color: black;
+    padding: 1.5rem 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: text-decoration 0.3s text-decoration-color 0.3s;
+}
+.resume a:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+}

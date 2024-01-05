@@ -16,6 +16,11 @@
     border-radius: 2rem;
     height: 50vh;
     width: 70vw;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.innerCard:hover {
+    transform: scale(1.05); /* slightly increase size */
+    background-color: #333; 
 }
 
 .imageCard {

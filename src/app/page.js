@@ -14,14 +14,14 @@ const Page = () => {
     return (
         <main>
             {/* Home Page */}
-            <Home />
+            <div id='home'><Home /></div>
             
             {/* About */}
             <Navbar />
-            <About />
+            <div id='about'><About /></div>
 
             {/* Experience  */}
-            <Header title="Experience"/>
+            <div id='experience'><Header title="Experience"/></div>
             <Exp 
                 position="Junior Tolling Field Technician"
                 company="407 ETR Concession Company Limited"
@@ -93,7 +93,7 @@ const Page = () => {
             />
 
             {/* Projects */}
-            <Header title="Projects"/>
+            <div id='projects'><Header title="Projects"/></div>
             <Project 
                 position="Yelpcamp"
                 software="Node.js, Express.js, MongoDB"
@@ -136,7 +136,7 @@ const Page = () => {
             />
 
             {/* Contact */}
-            <Contact />
+            <div id='contact'><Contact /></div>
         </main>
     );
 };

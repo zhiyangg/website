@@ -10,7 +10,6 @@
     right: 0; 
     z-index: 1000;
     width: 100vw;
-    visibility: hidden;
 }
   
 .logo a {
@@ -27,8 +26,11 @@
     padding: 0 1rem;
 }
 .navLinks li a {
-    transition: color 0.3s ease;
+    text-decoration: none;
+    transition: color 1s ease 2s, text-decoration 1s ease 2s;
 }
 .navLinks li a:hover {
     color: #ddd;
+    text-decoration: underline;
+    text-decoration-color: #ddd;
 }
