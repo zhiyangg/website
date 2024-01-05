@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    assetPrefix: '/website/public',
+    assetPrefix: '/public',
 }
 
 module.exports = nextConfig
