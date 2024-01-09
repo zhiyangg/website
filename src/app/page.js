@@ -43,7 +43,7 @@ const Page = () => {
                 endDate="Sep 2023"
                 description={[
                     "Proficiently soldered and tested circuit boards, ensuring a high degree of performance and reliability for various electronic applications, improving the team’s electrical systems",
-                    "Utilized Altium Designer to design PCB layouts, create component libraries, and develop schematics for various solarcar electrical systems, contributing to system functionality and advancements"
+                    "Utilized Altium Designer to design PCB layouts, create component libraries, and develop schematics for various solar car electrical systems, contributing to system functionality and advancements"
                 ]}
                 imgPath="/img/exp/bssr.png"
                 imgAlt="Blue Sky Solar Racing image"
