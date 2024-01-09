@@ -11,8 +11,8 @@ export default function contact() {
                 <div className={styles.info}>
                     <a href='https://github.com/zhiyangg' target='blank'>Github</a>
                     <a href='https://www.linkedin.com/in/zhiyangc/' target='blank'>LinkedIn</a>
-                    <a href='/img/resume.pdf' target="_blank">Resume</a>
-                    <a href='https://github.com/zhiyangg' target='blank'>Email</a>
+                    <a href='/website/img/resume.pdf' target="_blank">Resume</a>
+                    <a href='mailto:zhiyangchen003@gmail.com' target='blank'>Email</a>
                 </div>
             </div>
         </main>
