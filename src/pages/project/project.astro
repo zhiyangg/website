@@ -1,0 +1,13 @@
+---
+import projects from "../../data/projects.ts";
+---
+
+<section id="projects">
+    <h2>Projects</h2>
+    {projects.map((proj) => (
+        <a href={`/${proj.project}`} class="project-link">
+        <h3>{proj.title}</h3>
+        <p>{proj.date}</p>
+        </a>
+    ))}
+</section>

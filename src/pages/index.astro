@@ -1,0 +1,62 @@
+---
+import experiences from "../data/experience.ts";
+import projects from "../data/projects.ts";
+
+const navbar = [
+    { name: "Home", href: "/" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+];
+---
+
+<!-- Navbar Section -->
+<nav>
+    <ul>
+        {navbar.map((link) => (
+        <li>
+            <a href={link.href}>{link.name}</a>
+        </li>
+        ))}
+    </ul>
+</nav>
+
+<!-- Full-Screen Hero Section -->
+<section class="h-screen flex flex-col items-center justify-center text-center bg-[#0a192f] text-white">
+    <h1 class="text-5xl font-bold">Hi, I'm Zhi Yang!</h1>
+    <p class="mt-4 text-lg">Software Engineer | Building scalable applications</p>
+    <a href="#experience" class="mt-6 px-6 py-3 bg-white text-black rounded-lg transition hover:bg-gray-300">
+        See My Work
+    </a>
+</section>
+
+<!-- Two-Column Layout -->
+<main class="flex max-w-6xl mx-auto mt-12 px-6">
+    <!-- Left Sidebar (Fixed Name) -->
+    <aside class="w-1/4 sticky top-20 hidden md:block">
+        <h2 class="text-2xl font-bold">Zhi</h2>
+    </aside>
+
+    <!-- Right Content (Scrolls) -->
+    <section class="w-full md:w-3/4 space-y-24">
+        <div id="experience" class="pt-16">
+        <h2 class="text-3xl font-bold mb-6">Experience</h2>
+        {experiences.map((exp) => (
+            <a href={`/experience/${exp.experience}`} class="block bg-white p-6 rounded-lg shadow-md transition hover:-translate-y-1">
+            <h3 class="text-lg font-semibold">{exp.title} @ {exp.company}</h3>
+            <p class="text-gray-500">{exp.date}</p>
+            </a>
+        ))}
+        </div>
+
+        <div id="projects" class="pt-16">
+        <h2 class="text-3xl font-bold mb-6">Projects</h2>
+        {projects.map((proj) => (
+            <a href={`/project/${proj.project}`} class="block bg-white p-6 rounded-lg shadow-md transition hover:-translate-y-1">
+            <h3 class="text-lg font-semibold">{proj.title}</h3>
+            <p class="text-gray-500">{proj.date}</p>
+            </a>
+        ))}
+        </div>
+    </section>
+</main>
