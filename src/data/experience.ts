@@ -1,10 +1,10 @@
 const experiences = [
     {
-        title: "Software Engineer Intern",
+        title: "GPU Graphics Driver Validation & Debug Engineer Intern",
         company: "AMD",
         date: "May 2024 - Present",
-        summary: "As a Software Engineer Intern at AMD, I work on various projects related to system testing, automation, and telemetry.",
-        image: "/imgs/amd.jpg",
+        summary: "As an Intern at AMD, I work on various projects related to system testing, automation, and telemetry.",
+        image: "/imgs/amd.png",
         responsibilities: [
             "Performed telemetry and smoke testing for new OS releases.",
             "Worked on regressions, ticket resolution, and system testing.",
@@ -14,9 +14,9 @@ const experiences = [
         technologies: "Python, Bash, PowerShell, Windows OS Testing, Automation Tools"
     },
     {
-        title: "Software Developer Intern",
+        title: "Junior Tolling Field Technician",
         company: "407 ETR",
-        date: "Jan 2023 - Apr 2023",
+        date: "May 2023 - Sep 2023",
         summary: "At 407 ETR, I contributed to the backend development of tolling systems, improving automation and data processing pipelines.",
         image: "/imgs/407etr.png",
         responsibilities: [

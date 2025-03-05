@@ -2,86 +2,90 @@
 import experiences from "../data/experience.ts";
 import projects from "../data/projects.ts";
 
-const avatar = "/avatar.png"; // Avatar for landing page
+const avatar = "../imgs/profile.png"; 
+const githubLink = "https://github.com/zhiyangg";
+const linkedinLink = "https://www.linkedin.com/in/zhiyangc/";
+const githubIcon = "../svg/square-github-brands.svg";
+const linkedinIcon = "../svg/linkedin-brands-solid.svg";
 ---
 
 <html lang="en" class="scroll-smooth">
-<body class="bg-[#0a192f] text-white">
-    <!-- Landing Page (Hero Section) -->
-    <section id="about" class="h-screen flex flex-col md:flex-row items-center justify-between px-8 md:px-20 text-white bg-[#0a192f]">
+<body class="bg-[#F7F7F7] text-[#333333]">
+    <section id="about" class="h-screen flex flex-col md:flex-row items-center justify-between px-12 md:px-28 text-white bg-[#0a192f]">
         <!-- Left Side: Introduction -->
-        <div class="text-left space-y-4 max-w-lg">
-            <span class="bg-gray-700 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                Software Engineer • Tech Enthusiast • Problem Solver
+        <div class="text-left space-y-6 max-w-xl">
+            <span class="bg-gray-700 text-white text-sm font-semibold px-4 py-2 rounded-full">
+                Software Engineer &bull; Tech Enthusiast &bull; Car Aficionado
             </span>
-
-            <h1 class="text-5xl font-bold">
+    
+            <h1 class="text-6xl font-bold">
                 Hi! My name is <br> 
                 <span class="text-blue-400">Zhi Yang Chen</span>
             </h1>
-            <p class="text-lg text-gray-300">Passionate about building scalable applications and solving complex problems.</p>
-
-            <div class="flex space-x-4 mt-4">
-                <a href="#experience" class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
+            <p class="text-xl text-gray-300 leading-relaxed">
+                Passionate about building scalable applications and solving complex problems.
+            </p>
+    
+            <div class="flex space-x-6 mt-6">
+                <a href="#experience" class="px-8 py-4 text-lg bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">
                     Experience
                 </a>
-                <a href="#projects" class="px-6 py-3 border border-white text-white font-semibold rounded-lg hover:bg-gray-800">
+                <a href="#projects" class="px-8 py-4 text-lg border border-white text-white font-semibold rounded-lg hover:bg-gray-800 transition">
                     Projects
                 </a>
             </div>
         </div>
-
+    
         <!-- Right Side: Avatar -->
-        <div class="w-64 h-64 bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl flex items-center justify-center shadow-xl">
-            <img src={avatar} alt="Avatar" class="w-48 h-48 rounded-full">
+        <div class="w-96 h-96 rounded-3xl overflow-hidden">
+            <img src={avatar} alt="Avatar" class="w-full h-full object-cover object-[90%_70%] object-top">
         </div>
-    </section>
+    </section>    
 
     <!-- Main Layout (Sidebar + Content) -->
-    <div class="flex max-w-7xl mx-auto px-6">
+    <div class="flex max-w-7xl mx-auto px-6 gap-12">
 
         <!-- Left Sidebar (1/3 Screen) -->
-        <aside class="w-1/3 min-h-screen flex flex-col justify-between py-20 sticky top-0">
+        <aside class="w-1/4 min-h-screen flex flex-col justify-between py-20 sticky top-0">
+
             <div>
-                <h1 class="text-5xl font-bold leading-tight">Zhi Yang Chen</h1>
-                <p class="text-gray-400 mt-4">Software Engineer | Tech Enthusiast</p>
+                <h1 class="text-4xl font-bold leading-tight">Zhi Yang Chen</h1>          
             </div>
             <nav class="mt-8 space-y-4">
-                <a href="#about" class="block text-gray-400 hover:text-white transition"> About</a>
-                <a href="#experience" class="block text-gray-400 hover:text-white transition">Experience</a>
-                <a href="#projects" class="block text-gray-400 hover:text-white transition">Projects</a>
+                <a href="#about" class="block text-gray-500 hover:text-[#3A8DFF] transition"> About</a>
+                <a href="#experience" class="block text-gray-500 hover:text-[#3A8DFF] transition">Experience</a>
+                <a href="#projects" class="block text-gray-500 hover:text-[#3A8DFF] transition">Projects</a>
             </nav>
             <div class="mt-auto space-x-4">
-                <a href="https://github.com" class="text-gray-400 hover:text-white">GitHub</a>
-                <a href="https://linkedin.com" class="text-gray-400 hover:text-white">LinkedIn</a>
+                <a href={githubLink} target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-[#3A8DFF]"><img src={linkedinIcon} alt="Linkedin" class="w-8 h-8 inline-block"></a>
+                <a href={linkedinLink} target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-[#3A8DFF]"><img src={githubIcon} alt="Github" class="w-8 h-8 inline-block"></a>
             </div>
         </aside>
 
         <!-- Right Content (2/3 Screen) -->
-        <main class="w-2/3 py-20 space-y-20">
+        <main class="w-3/4 py-20 space-y-20">
             <!-- Experience Section -->
-            <section id="experience">
+            <section id="experience" class="pt-20">
                 <h2 class="text-4xl font-bold mb-10">Experience</h2>
-                <div class="space-y-12">
+                <div class="space-y-8">
                     {experiences.map((exp) => (
                         <a href={exp.companyLink} target="_blank" rel="noopener noreferrer" class="block">
-                            <div class="flex flex-col md:flex-row items-center gap-6 bg-[#112240] p-6 rounded-lg shadow-lg hover:bg-[#233554] transition">
+                            <div class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-lg hover:bg-[#E3E3E3] transition">
                                 <!-- Experience Image -->
                                 <div class="w-full md:w-1/3">
                                     <img src={exp.image} alt={exp.title} class="w-full h-40 object-cover rounded-lg shadow-md">
                                 </div>
-            
                                 <!-- Experience Details -->
                                 <div class="w-full md:w-2/3 space-y-3">
-                                    <p class="text-sm text-gray-400">{exp.date}</p>
-                                    <h3 class="text-2xl font-semibold">{exp.title} @ <span class="text-blue-400">{exp.company}</span></h3>
-                                    <p class="text-gray-300 text-sm">{exp.summary}</p>
+                                    <p class="text-sm text-gray-500">{exp.date}</p>
+                                    <h3 class="text-2xl font-semibold">{exp.title} @ <span class="text-[#3A8DFF]">{exp.company}</span></h3>
+                                    <p class="text-gray-600 text-sm">{exp.summary}</p>
                                 </div>
                             </div>
                         </a>
                     ))}
                 </div>
-            </section>            
+            </section>
 
             <!-- Projects Section -->
             <section id="projects">
@@ -89,17 +93,16 @@ const avatar = "/avatar.png"; // Avatar for landing page
                 <div class="space-y-12">
                     {projects.map((proj) => (
                         <a href={proj.projectLink} target="_blank" rel="noopener noreferrer" class="block">
-                            <div class="flex flex-col md:flex-row items-center gap-6 bg-[#112240] p-6 rounded-lg shadow-lg hover:bg-[#233554] transition">
+                            <div class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-lg hover:bg-[#E3E3E3] transition">
                                 <!-- Project Image -->
                                 <div class="w-full md:w-1/3">
                                     <img src={proj.image} alt={proj.title} class="w-full h-40 object-cover rounded-lg shadow-md">
                                 </div>
-
                                 <!-- Project Details -->
                                 <div class="w-full md:w-2/3 space-y-3">
                                     <h3 class="text-2xl font-semibold">{proj.title}</h3>
-                                    <p class="text-gray-300 text-sm">{proj.summary}</p>
-                                    <p class="text-gray-400 text-xs">Technologies: {proj.technologies}</p>
+                                    <p class="text-gray-600 text-sm">{proj.summary}</p>
+                                    <p class="text-gray-500 text-xs">Technologies: {proj.technologies}</p>
                                 </div>
                             </div>
                         </a>
