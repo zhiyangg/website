@@ -19,7 +19,6 @@ const projects = [
         title: "Threads & Process Manager",
         summary: "In our Operating Systems course, we integrated advanced synchronization mechanisms using C for hash table operations. This involved employing pthread mutexes to ensure thread-safe data access and modification in a multi-threaded environment.",
         image: "/imgs/project/threads.png",
-        projectLink: "",
         technologies: "C, Linux, Virtual Machines",
         showcase: true
     },
@@ -27,7 +26,6 @@ const projects = [
         title: "16-bit Enhanced Processor",
         summary: "In our Computer Organization course, we developed a 16-bit processor featuring 8 registers, capable of executing instructions like mov, movt, add, sub, ldr, str, and b. For debugging, we used ModelSim's FSM timing diagram, enhancing the ALU for add, sub, and and operations.",
         image: "/imgs/project/processor.png",
-        projectLink: "",
         technologies: "Verilog (HDL), Assembly, ModelSim",
         showcase: true
     }
