@@ -19,7 +19,7 @@ const experiences = [
         company: "407 ETR Concession Company Limited",
         date: "May 2023 - Sep 2023",
         summary: "Maintained and tested tolling equipment, ensuring high reliability and efficiency. Assisted in major infrastructure upgrades and troubleshooting to enhance tolling operations.",
-        image: "/wesbite/imgs/experience/407etr.png",
+        image: "/website/imgs/experience/407etr.png",
         responsibilities: [
             "Maintained tolling equipment through detailed inspections, diagnostics, and adjustments, securing a 98% peak performance rate and guaranteeing a 99.5% uninterrupted tolling operation",
             "Conducted exhaustive testing of tolling equipment in a controlled laboratory environment, proactively resolving technical issues to maintain a 98% data transmission reliability rate",
