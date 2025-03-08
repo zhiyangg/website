@@ -6,16 +6,18 @@ export default {
     extend: {
       keyframes: {
         typing: {
-          from: { width: "0" },
-          to: { width: "100%" },
+          "0%": { width: "0%" }, /* start typing */
+          "50%": { width: "100%" }, /* finish typing */
+          "60%": { width: "100%" }, /* small pause */
+          "100%": { width: "0%" }, /* delete the written text */
         },
         blink: {
           "50%": { borderColor: "transparent" },
-          "100%": { borderColor: "orange" },
+          "100%": { borderColor: "black" },
         },
       },
       animation: {
-        typing: "typing 3.5s steps(40, end) forwards",
+        typing: "typing 5s steps(80, end) infinite",
         blink: "blink 0.75s step-end infinite",
       },
     },
