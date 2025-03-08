@@ -11,7 +11,7 @@ const experiences = [
             "Developed automation scripts to streamline testing workflows."
         ],
         companyLink: "https://www.amd.com",
-        technologies: "Python, PowerShell, Windows OS Testing, Automation",
+        technologies: "Python, PowerShell, Automation, Windows OS Testing",
         showcase: true
     },
     {
