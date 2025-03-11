@@ -1,18 +1,26 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+
+export default {
+  content: ["./src/**/*.{astro,html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      keyframes: {
+        typing: {
+          "0%": { width: "0%" }, /* start typing */
+          "40%": { width: "100%" }, /* finish typing */
+          "60%": { width: "100%" }, /* small pause */
+          "100%": { width: "0%" }, /* delete the written text */
+        },
+        blink: {
+          "50%": { borderColor: "transparent" },
+          "100%": { borderColor: "black" },
+        },
+      },
+      animation: {
+        typing: "typing 5s steps(120, end) infinite",
+        blink: "blink 0.75s step-end infinite",
       },
     },
   },
   plugins: [],
-}
+};
