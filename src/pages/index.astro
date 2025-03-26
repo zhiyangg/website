@@ -1,14 +1,15 @@
 ---
+import { Image } from 'astro:assets';
 import experiences from "../data/experience.ts";
 import projects from "../data/projects.ts";
 
-const avatar = "../website/imgs/profile2.jpg"; 
-const websiteIcon = "../website/svg/uoft.png";
+import avatarImage from '../website/src/assets/imgs/profile2.jpg';
+import websiteIcon from "../website/src/assets/imgs/uoft.png";
+import githubIcon from "../website/src/assets/svg/square-github-brands.svg";
+import linkedinIcon from "../website/src/assets/svg/linkedin-brands-solid.svg";
+
 const githubLink = "https://github.com/zhiyangg";
 const linkedinLink = "https://www.linkedin.com/in/zhiyangc/";
-
-const githubIcon = "../website/svg/square-github-brands.svg";
-const linkedinIcon = "../website/svg/linkedin-brands-solid.svg";
 ---
 
 <head>
@@ -61,7 +62,12 @@ const linkedinIcon = "../website/svg/linkedin-brands-solid.svg";
     
         <!-- Right Side: Avatar -->
         <div class="w-96 h-96 overflow-hidden rounded-3xl shadow-lg">
-            <img src={avatar} alt="Avatar" class="object-cover w-full h-full">
+            <Image 
+                src={avatarImage} 
+                alt="Avatar" 
+                loading="eager"
+                class="w-full h-full object-cover" 
+            />
         </div>
     </section>    
 
@@ -82,10 +88,20 @@ const linkedinIcon = "../website/svg/linkedin-brands-solid.svg";
             <!-- Social Icons -->
             <div class="flex space-x-4 mt-4">
                 <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                    <img src={githubIcon} alt="GitHub" class="w-8 h-8 inline-block hover:opacity-80 transition">
+                    <Image
+                        src={githubIcon}
+                        alt="GitHub Icon"
+                        loading="lazy"
+                        class="w-8 h-8 inline-block hover:opacity-80 transition"
+                    />
                 </a>
                 <a href={linkedinLink} target="_blank" rel="noopener noreferrer">
-                    <img src={linkedinIcon} alt="LinkedIn" class="w-8 h-8 inline-block hover:opacity-80 transition">
+                    <Image
+                        src={linkedinIcon}
+                        alt="Linkedin Icon"
+                        loading="lazy"
+                        class="w-8 h-8 inline-block hover:opacity-80 transition"
+                    />
                 </a>
             </div>
         </aside>
@@ -100,7 +116,12 @@ const linkedinIcon = "../website/svg/linkedin-brands-solid.svg";
                             <div class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-lg hover:bg-[#E3E3E3] transition">
                                 <!-- Experience Image -->
                                 <div class="w-full md:w-1/3">
-                                    <img src={exp.image} alt={exp.title} class="w-full h-44 object-cover rounded-lg shadow-md">
+                                    <Image
+                                        src={exp.image}
+                                        alt={exp.title}
+                                        loading="lazy"
+                                        class="w-full h-44 object-cover rounded-lg shadow-md"
+                                    />
                                 </div>
                                 <!-- Experience Details -->
                                 <div class="w-full md:w-2/3 space-y-3">
@@ -125,7 +146,12 @@ const linkedinIcon = "../website/svg/linkedin-brands-solid.svg";
                             <div class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-lg hover:bg-[#E3E3E3] transition">
                                 <!-- Project Image (Fixed Size) -->
                                 <div class="w-full md:w-1/3">
-                                    <img src={proj.image} alt={proj.title} class="w-full h-40 object-cover rounded-lg shadow-md">
+                                    <Image
+                                        src={proj.image}
+                                        alt={proj.title}
+                                        loading="lazy"
+                                        class="w-full h-40 object-cover rounded-lg shadow-md"
+                                    />
                                 </div>
                                 <!-- Project Details -->
                                 <div class="w-full md:w-2/3 space-y-3">
