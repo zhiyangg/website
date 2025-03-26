@@ -3,23 +3,23 @@ import { Image } from 'astro:assets';
 import experiences from "../data/experience.ts";
 import projects from "../data/projects.ts";
 
-import avatarImage from '../website/src/assets/imgs/profile2.jpg';
-import websiteIcon from "../website/src/assets/imgs/uoft.png";
-import githubIcon from "../website/src/assets/svg/square-github-brands.svg";
-import linkedinIcon from "../website/src/assets/svg/linkedin-brands-solid.svg";
+import avatarImage from '../assets/imgs/profile2.jpg';
+import websiteIcon from "../assets/imgs/uoft.png";
+import githubIcon from "../assets/svg/square-github-brands.svg";
+import linkedinIcon from "../assets/svg/linkedin-brands-solid.svg";
 
 const githubLink = "https://github.com/zhiyangg";
 const linkedinLink = "https://www.linkedin.com/in/zhiyangc/";
 ---
 
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href={websiteIcon}>
+    <link rel="icon" type="image/png" href={websiteIcon.src}>
     <title>Zhi Yang Chen</title>
 </head>
 
-<html lang="en" class="scroll-smooth">
 <body class="bg-[#F7F7F7] text-[#333333] m-0 p-0">
     <section id="about" class="flex flex-col-reverse items-center justify-center h-screen w-full bg-[#0A192F] px-4 gap-y-4">
         <!-- Left Side: Introduction -->
