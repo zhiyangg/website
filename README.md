@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-[Personal Portfolio Link](https://zhiyangg.github.io/website/)
+[zhiyangchen.dev](https://zhiyangchen.dev)
 
 This is my personal portfolio built with [Astro](https://astro.build/) and [TailwindCSS](https://tailwindcss.com/). It showcases my background, work experience, and selected projects in a clean, responsive layout. The site is fully responsive across all screen sizes and optimized for both desktop and mobile viewing.
 
