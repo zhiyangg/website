@@ -4,6 +4,9 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        shortHeight: { raw: "(max-height: 500px)" }, // Custom screen for iPhone 14 Pro Max landscape 
+      },
       keyframes: {
         typing: {
           "0%": { width: "0%" }, /* start typing */
