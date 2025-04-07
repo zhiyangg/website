@@ -7,6 +7,6 @@ import icons from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
     integrations: [tailwind(), sitemap(), icons()],
-    site: 'https://zhiyangg.github.io/website/',
-    base: 'website',
+    site: 'https://zhiyangchen.dev',
+    base: '/',
 });
