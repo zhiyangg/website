@@ -16,7 +16,7 @@ const linkedinLink = "https://www.linkedin.com/in/zhiyangc/";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href={websiteIcon.src}>
+    <link rel="preload" type="image/png" href={websiteIcon.src}>
     <title>Zhi Yang Chen</title>
 
     <!-- Open Graph -->
@@ -100,7 +100,6 @@ const linkedinLink = "https://www.linkedin.com/in/zhiyangc/";
                     <Image
                         src={githubIcon}
                         alt="GitHub Icon"
-                        loading="lazy"
                         class="w-8 h-8 inline-block hover:opacity-80 transition"
                     />
                 </a>
@@ -108,7 +107,6 @@ const linkedinLink = "https://www.linkedin.com/in/zhiyangc/";
                     <Image
                         src={linkedinIcon}
                         alt="Linkedin Icon"
-                        loading="lazy"
                         class="w-8 h-8 inline-block hover:opacity-80 transition"
                     />
                 </a>
