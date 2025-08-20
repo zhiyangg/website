@@ -10,7 +10,7 @@ const projects = [
         image: yelpcampLogo,
         projectLink: "https://yelpcamp-4549.onrender.com/",
         technologies: "Node.js, Express.js, MongoDB",
-        showcase: true
+        showcase: false
     },
     {
         title: "OTFMap",
