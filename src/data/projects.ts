@@ -1,9 +1,18 @@
+import findashLogo from "../assets/imgs/project/findash.png"
 import yelpcampLogo from "../assets/imgs/project/yelpcamp.png";
 import otfMapLogo from "../assets/imgs/project/otfmap.png";
 import threadsLogo from "../assets/imgs/project/threads.png";
 import processorLogo from "../assets/imgs/project/processor.png";
 
 const projects = [
+    {
+        title: "Findash",
+        summary: "Findash is a full-stack personal finance dashboard that helps users track net worth, budgets, and financial goals in real time. It features secure authentication, Row-Level Security (RLS) for per-user data isolation, and interactive dashboards designed for usability and speed.",
+        image: findashLogo,
+        projectLink: "https://findash.dev/",
+        technologies: "Next.js (App Router), Supabase, PostgreSQL, Tailwind CSS, shadcn/ui, Vercel",
+        showcase: true
+    },
     {
         title: "Yelpcamp",
         summary: "YelpCamp is a web application that allows users to discover and review campgrounds. It's a platform where outdoor enthusiasts can share their favorite camping spots, read and write reviews, and plan their next adventure outdoors.",
