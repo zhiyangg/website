@@ -9,7 +9,7 @@ const experiences = [
     {
         title: "GPU Graphics Driver Validation & Debug Engineer",
         company: "AMD",
-        date: "May 2024 - Present",
+        date: "May 2024 - Aug 2025",
         summary: "Responsible for system testing, automation, and telemetry in GPU driver validation. Work on regression testing, issue resolution, and automation to enhance efficiency in new OS releases.",
         image: amdLogo,
         responsibilities: [
