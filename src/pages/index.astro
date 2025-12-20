@@ -90,15 +90,33 @@ const linkedinLink = "https://www.linkedin.com/in/zhiyangc/";
             <p class="text-gray-700 max-w-3xl mb-8 text-lg leading-relaxed">
                 I'm a Computer Engineering student at the University of Toronto. I enjoy building software projects — from full-stack web apps to low-level systems. I'm passionate about building useful products, learning new technologies, and collaborating on interesting problems. Currently exploring full-stack development, systems programming, and ways to turn ideas into real, usable products.
             </p>
-                <div class="flex items-center gap-4 mt-4 md:mt-0">
-                    <a href={githubLink} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <Image src={githubIcon} alt="GitHub" class="w-8 h-8 inline-block hover:opacity-80 transition" />
-                    </a>
-                    <a href={linkedinLink} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <Image src={linkedinIcon} alt="LinkedIn" class="w-8 h-8 inline-block hover:opacity-80 transition" />
-                    </a>
-                    <span class="text-sm text-gray-600 ml-2">zhiyangchen003@gmail.com</span>
-                </div>
+
+        <!-- Contact section -->
+        <div class="flex flex-col gap-3">
+            <h3 class="text-lg font-semibold text-[#0A192F]">
+                Connect with me: 
+            </h3>
+
+            <div class="flex items-center gap-4">
+                <a href={githubLink} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <Image
+                        src={githubIcon}
+                        alt="GitHub"
+                        class="w-8 h-8 hover:opacity-80 transition"
+                    />
+                </a>
+
+                <a href={linkedinLink} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <Image
+                        src={linkedinIcon}
+                        alt="LinkedIn"
+                        class="w-8 h-8 hover:opacity-80 transition"
+                    />
+                </a>
+
+                <span class="text-sm text-gray-600">
+                    zhiyangchen003@gmail.com
+                </span>
             </div>
         </div>
     </section>
@@ -116,25 +134,8 @@ const linkedinLink = "https://www.linkedin.com/in/zhiyangc/";
                 <a href="#about" class="block text-gray-600 hover:text-[#1E3A8A] transition">About</a>
                 <a href="#experience" class="block text-gray-600 hover:text-[#1E3A8A] transition">Experience</a>
                 <a href="#projects" class="block text-gray-600 hover:text-[#1E3A8A] transition">Projects</a>
+                <a href="#about" class="block text-gray-600 hover:text-[#1E3A8A] transition">Contact</a>
             </nav>
-
-            <!-- Social Icons -->
-            <div class="flex space-x-4 mt-4">
-                <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                    <Image
-                        src={githubIcon}
-                        alt="GitHub Icon"
-                        class="w-8 h-8 inline-block hover:opacity-80 transition"
-                    />
-                </a>
-                <a href={linkedinLink} target="_blank" rel="noopener noreferrer">
-                    <Image
-                        src={linkedinIcon}
-                        alt="Linkedin Icon"
-                        class="w-8 h-8 inline-block hover:opacity-80 transition"
-                    />
-                </a>
-            </div>
         </aside>
 
         <!-- Right Content (2/3 Screen for lg and larger, fullwidth for md and smaller) -->
