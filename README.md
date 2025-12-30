@@ -2,14 +2,14 @@
 
 [zhiyangchen.dev](https://zhiyangchen.dev)
 
-This is my personal portfolio built with [Astro](https://astro.build/) and [TailwindCSS](https://tailwindcss.com/). It showcases my background, work experience, and selected projects in a clean, responsive layout. The site is fully responsive across all screen sizes and optimized for both desktop and mobile viewing.
+Personal portfolio built with [Astro](https://astro.build/) and [TailwindCSS](https://tailwindcss.com/). Features a live weather widget showing current Toronto, ON conditions.
 
 ## Tech Stack
 
 - **Framework:** [Astro](https://astro.build/)
 - **Styling:** [TailwindCSS](https://tailwindcss.com/)
-- **Icons:** [Astro Icon](https://github.com/natemoo-re/astro-icon)
-- **Deployment:** Static site
+- **Weather:** [Google Weather API](https://developers.google.com/maps/documentation/weather)
+- **Deployment:** GitHub Pages
 
 ## Quick Start
 
@@ -20,6 +20,13 @@ git clone https://github.com/zhiyangg/website.git
 # Install dependencies
 npm install
 
+# Add environment variables
+# Create .env file with: PUBLIC_GOOGLE_WEATHER_API_KEY=your_api_key
+
 # Start development server
 npm run dev
+
+# Build for production + preview
+npm run build
+npm run preview
 ```

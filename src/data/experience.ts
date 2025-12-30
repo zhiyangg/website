@@ -1,3 +1,4 @@
+import scotiabankLogo from "../assets/imgs/experience/scotiabank.png";
 import amdLogo from "../assets/imgs/experience/amd.png";
 import etrLogo from "../assets/imgs/experience/407etr.png";
 import bssrLogo from "../assets/imgs/experience/bssr.jpeg";
@@ -6,6 +7,21 @@ import cefsLogo from "../assets/imgs/experience/cefs.jpeg";
 import cadetsLogo from "../assets/imgs/experience/cadets.png";
 
 const experiences = [
+    {
+        title: "Capstone Research Student",
+        company: "Scotiabank",
+        date: "Sep 2025 - Present",
+        summary: "University capstone project conducted in collaboration with Scotiabank, focusing on cash break reconciliation in a real-world financial environment.",
+        image: scotiabankLogo,
+        responsibilities: [
+            "Designing a Recon Agentic Tool to assist with cash break identification and reconciliation analysis.",
+            "Implementing rule-based and agentic workflows to investigate transaction discrepancies and generate actionable insights.",
+            "Collaborating with Scotiabank stakeholders to define requirements, evaluate approaches, and document system trade-offs."
+        ],
+        companyLink: "https://www.scotiabank.com/ca/en/",
+        technologies: "Python, LLM Agents, Data Analysis, Systems Design",
+        showcase: true
+    },
     {
         title: "GPU Graphics Driver Validation & Debug Engineer",
         company: "AMD",
@@ -34,7 +50,7 @@ const experiences = [
         ],
         companyLink: "https://407etr.com",
         technologies: "Hardware Diagnostics, Equipment Testing, Preventative Maintenance",
-        showcase: true
+        showcase: false
     },
     {
         title: "Electrical Team",
@@ -63,7 +79,7 @@ const experiences = [
         ],
         companyLink: "https://www.markham.ca/",
         technologies: "Equipment Operation, Landscaping, Maintenance Planning",
-        showcase: true
+        showcase: false
     }, 
     {
         title: "Program Coordinator",
@@ -78,7 +94,7 @@ const experiences = [
         ],
         companyLink: "https://cefscentre.org/",
         technologies: "Event Planning, Activity Coordination, Leadership",
-        showcase: true
+        showcase: false
     }, 
     {
         title: "Flight Sergeant",
