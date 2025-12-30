@@ -50,7 +50,7 @@ const experiences = [
         ],
         companyLink: "https://407etr.com",
         technologies: "Hardware Diagnostics, Equipment Testing, Preventative Maintenance",
-        showcase: true
+        showcase: false
     },
     {
         title: "Electrical Team",
@@ -79,7 +79,7 @@ const experiences = [
         ],
         companyLink: "https://www.markham.ca/",
         technologies: "Equipment Operation, Landscaping, Maintenance Planning",
-        showcase: true
+        showcase: false
     }, 
     {
         title: "Program Coordinator",
@@ -94,7 +94,7 @@ const experiences = [
         ],
         companyLink: "https://cefscentre.org/",
         technologies: "Event Planning, Activity Coordination, Leadership",
-        showcase: true
+        showcase: false
     }, 
     {
         title: "Flight Sergeant",
