@@ -21,6 +21,8 @@ jobs:
         uses: withastro/action@v3
         with:
           package-manager: npm
+        env:
+          PUBLIC_GOOGLE_WEATHER_API_KEY: ${{ secrets.PUBLIC_GOOGLE_WEATHER_API_KEY }}
 
   deploy:
     needs: build
