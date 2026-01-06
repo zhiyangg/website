@@ -23,7 +23,7 @@ const experiences = [
         showcase: true
     },
     {
-        title: "GPU Graphics Driver Validation & Debug Engineer",
+        title: "GPU Graphics Driver Validation & Debug Engineer Intern",
         company: "AMD",
         date: "May 2024 - Aug 2025",
         summary: "Responsible for system testing, automation, and telemetry in GPU driver validation. Work on regression testing, issue resolution, and automation to enhance efficiency in new OS releases.",
