@@ -301,11 +301,11 @@ const googleWeatherApiKey = import.meta.env.PUBLIC_GOOGLE_WEATHER_API_KEY;
             // map weather types to emoji icons
             const weatherIcons = {
                 'CLEAR': '☀️',
-                'SUNNY': '☀️✨',
+                'SUNNY': '☀️',
                 'MOSTLY_CLEAR': '🌤️',
                 'PARTLY_CLOUDY': '⛅',
                 'MOSTLY_CLOUDY': '☁️',
-                'CLOUDY': '☁️☁️',
+                'CLOUDY': '☁️',
                 'OVERCAST': '🌥️',
                 'FOG': '🌫️',
                 'LIGHT_RAIN': '🌦️💧',
@@ -324,7 +324,7 @@ const googleWeatherApiKey = import.meta.env.PUBLIC_GOOGLE_WEATHER_API_KEY;
                 'THUNDERSTORM': '⛈️⚡',
                 'HAIL': '🌨️🧊',
                 'SLEET': '🌨️💧',
-                'WINDY': '💨🌬️'
+                'WINDY': '💨'
             };
             
             const weatherType = data.weatherCondition.type;
