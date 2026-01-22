@@ -11,7 +11,7 @@ const projects = [
         summary: "Findash is a full-stack personal finance dashboard that helps users track net worth, budgets, and financial goals in real time. It features secure authentication, Row-Level Security (RLS) for per-user data isolation, and interactive dashboards designed for usability and speed.",
         image: findashLogo,
         projectLink: "https://findash.dev/",
-        technologies: "Next.js, Supabase, PostgreSQL, Tailwind CSS, shadcn/ui, Vercel",
+        technologies: "Next.js, Supabase, PostgreSQL, Vercel",
         showcase: true
     },
     {
@@ -35,7 +35,7 @@ const projects = [
         summary: "As a part of our Software Design & Communications course, we have developed a user friendly Geographic Information System (GIS) with a wide array of features to provide a comprehensive solution for all navigation needs.",
         image: otfMapLogo,
         projectLink: "https://www.youtube.com/watch?v=OgRmhjl-Iy8",
-        technologies: "GTK, EZGL, OpenStreetMap API",
+        technologies: "C++, Git, GIS, OpenStreetMap API",
         showcase: true
     },
     {
