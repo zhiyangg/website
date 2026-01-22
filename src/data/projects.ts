@@ -11,7 +11,7 @@ const projects = [
         summary: "Findash is a full-stack personal finance dashboard that helps users track net worth, budgets, and financial goals in real time. It features secure authentication, Row-Level Security (RLS) for per-user data isolation, and interactive dashboards designed for usability and speed.",
         image: findashLogo,
         projectLink: "https://findash.dev/",
-        technologies: "Next.js, Supabase, PostgreSQL, Vercel",
+        technologies: "Next.js, Supabase, PostgreSQL",
         showcase: true
     },
     {
@@ -32,10 +32,10 @@ const projects = [
     },
     {
         title: "OTFMap",
-        summary: "As a part of our Software Design & Communications course, we have developed a user friendly Geographic Information System (GIS) with a wide array of features to provide a comprehensive solution for all navigation needs.",
+        summary: "Designed and built a desktop GIS application supporting interactive map rendering and route planning across multiple cities. Implemented efficient pathfinding using the A* algorithm, with support for different transportation modes (driving, biking, transit) and configurable map views (day/night). Focused on performance, usability, and clean UI design while working in a team-based software engineering environment.",
         image: otfMapLogo,
         projectLink: "https://www.youtube.com/watch?v=OgRmhjl-Iy8",
-        technologies: "C++, Git, GIS, OpenStreetMap API",
+        technologies: "C++, Git, OpenStreetMap API",
         showcase: true
     },
     {
@@ -49,7 +49,7 @@ const projects = [
         title: "16-bit Enhanced Processor",
         summary: "In our Computer Organization course, we developed a 16-bit processor featuring 8 registers, capable of executing instructions like mov, movt, add, sub, ldr, str, and b. For debugging, we used ModelSim's FSM timing diagram, enhancing the ALU for add, sub, and and operations.",
         image: processorLogo,
-        technologies: "Verilog (HDL), Assembly, ModelSim",
+        technologies: "Verilog, Assembly, ModelSim",
         showcase: true
     }
 ];
