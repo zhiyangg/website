@@ -1,4 +1,5 @@
 import findashLogo from "../assets/imgs/project/findash.png"
+import distLogo from "../assets/imgs/project/ECE419.png";
 import yelpcampLogo from "../assets/imgs/project/yelpcamp.png";
 import otfMapLogo from "../assets/imgs/project/otfmap.png";
 import threadsLogo from "../assets/imgs/project/threads.png";
@@ -10,7 +11,15 @@ const projects = [
         summary: "Findash is a full-stack personal finance dashboard that helps users track net worth, budgets, and financial goals in real time. It features secure authentication, Row-Level Security (RLS) for per-user data isolation, and interactive dashboards designed for usability and speed.",
         image: findashLogo,
         projectLink: "https://findash.dev/",
-        technologies: "Next.js (App Router), Supabase, PostgreSQL, Tailwind CSS, shadcn/ui, Vercel",
+        technologies: "Next.js, Supabase, PostgreSQL, Tailwind CSS, shadcn/ui, Vercel",
+        showcase: true
+    },
+    {
+        title: "Distributed Key Value Store with Real Time Notifications",
+        summary: "Built a distributed key–value storage system with replication and fault tolerance. Designed and implemented a client subscription mechanism that delivers real-time notifications when subscribed keys are updated or deleted. Implemented server coordination, metadata synchronization, and concurrency control, and evaluated system performance under varying client/server loads.",
+        image: distLogo,
+        projectLink: "https://www.youtube.com/watch?v=sBSv1Nour-Y",
+        technologies: "Java, Git, Distributed Systems, Databases",
         showcase: true
     },
     {

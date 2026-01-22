@@ -312,6 +312,7 @@ const googleWeatherApiKey = import.meta.env.PUBLIC_GOOGLE_WEATHER_API_KEY;
                 'RAIN': '🌧️',
                 'HEAVY_RAIN': '🌧️💦',
                 'LIGHT_SNOW': '🌨️',
+                'LIGHT SNOW SHOWERS': '🌨️❄️',
                 'SNOW': '❄️☃️',
                 'HEAVY_SNOW': '❄️❄️',
                 'FLURRIES': '🌨️❄️',
@@ -328,7 +329,7 @@ const googleWeatherApiKey = import.meta.env.PUBLIC_GOOGLE_WEATHER_API_KEY;
             };
             
             const weatherType = data.weatherCondition.type;
-            const icon = weatherIcons[weatherType] || '🌡️';
+            const icon = weatherIcons[weatherType] || '';
             
             const iconElement = document.getElementById('weather-icon');
             if (iconElement) {
