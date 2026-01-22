@@ -19,7 +19,7 @@ const experiences = [
             "Collaborating with Scotiabank stakeholders to define requirements, evaluate approaches, and document system trade-offs."
         ],
         companyLink: "https://www.scotiabank.com/ca/en/",
-        technologies: "Python, LLM Agents, Data Analysis, Systems Design",
+        technologies: "Javascript, Node.js, Machine Learning, Backend Development",
         showcase: true
     },
     {
@@ -34,7 +34,7 @@ const experiences = [
             "Developed automation scripts to streamline testing workflows."
         ],
         companyLink: "https://www.amd.com",
-        technologies: "Python, PowerShell, Automation, Windows OS Testing",
+        technologies: "Systems Testing, Regression Testing, Debugging, C++",
         showcase: true
     },
     {
@@ -53,7 +53,7 @@ const experiences = [
         showcase: false
     },
     {
-        title: "Electrical Team",
+        title: "Electrical Team Member",
         company: "Blue Sky Solar Racing",
         date: "Sep 2022 - Sep 2023",
         summary: "Contributed to the design and testing of electrical systems for a solar-powered racing car. Worked with PCB layouts, soldering, and system optimization to enhance vehicle performance.",
@@ -63,7 +63,7 @@ const experiences = [
             "Utilized Altium Designer to design PCB layouts, create component libraries, and develop schematics for various solar car electrical systems, contributing to system functionality and advancements"
         ],
         companyLink: "https://www.blueskysolar.org/team",
-        technologies: "PCB Design, Altium Designer, Circuit Testing, Soldering",
+        technologies: "PCB Design, Altium Designer, Soldering",
         showcase: true
     },
     {
