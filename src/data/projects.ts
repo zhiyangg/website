@@ -11,7 +11,7 @@ const projects = [
         summary: "Findash is a full-stack personal finance dashboard that helps users track net worth, budgets, and financial goals in real time. It features secure authentication, Row-Level Security (RLS) for per-user data isolation, and interactive dashboards designed for usability and speed.",
         image: findashLogo,
         projectLink: "https://findash.dev/",
-        technologies: "Next.js, Supabase, PostgreSQL",
+        technologies: "Next.js, Supabase, PostgreSQL, Vercel",
         showcase: true
     },
     {
