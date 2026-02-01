@@ -5,11 +5,13 @@ import projects from "../data/projects.ts";
 
 import avatarImage from '../assets/imgs/profile3.png';
 import websiteIcon from "../assets/imgs/uoft.png";
-import githubIcon from "../assets/svg/square-github-brands.svg";
-import linkedinIcon from "../assets/svg/linkedin-brands-solid.svg";
+import githubIcon from "../assets/svg/github.svg";
+import linkedinIcon from "../assets/svg/linkedin.svg";
+import emailIcon from "../assets/svg/email.svg";
 
 const githubLink = "https://github.com/zhiyangg";
 const linkedinLink = "https://www.linkedin.com/in/zhiyangc/";
+const emailLink = "mailto:zhiyangchen003@gmail.com";
 const googleWeatherApiKey = import.meta.env.PUBLIC_GOOGLE_WEATHER_API_KEY;
 ---
 
@@ -118,7 +120,7 @@ const googleWeatherApiKey = import.meta.env.PUBLIC_GOOGLE_WEATHER_API_KEY;
                     <Image
                         src={githubIcon}
                         alt="GitHub"
-                        class="w-8 h-8 hover:opacity-80 transition"
+                        class="w-8 h-8 hover:opacity-70 transition"
                     />
                 </a>
 
@@ -126,14 +128,22 @@ const googleWeatherApiKey = import.meta.env.PUBLIC_GOOGLE_WEATHER_API_KEY;
                     <Image
                         src={linkedinIcon}
                         alt="LinkedIn"
-                        class="w-8 h-8 hover:opacity-80 transition"
+                        class="w-8 h-8 hover:opacity-70 transition"
                     />
                 </a>
 
-                <span class="text-sm text-gray-600">
-                    zhiyangchen003@gmail.com
-                </span>
+                <a href={emailLink} target="_blank" rel="noopener noreferrer" aria-label="Email">
+                    <Image
+                        src={emailIcon}
+                        alt="Email"
+                        class="w-8 h-8 hover:opacity-70 transition"
+                    />
+                </a>
             </div>
+
+            <span class="text-sm text-gray-500">
+                zhiyangchen003@gmail.com
+            </span>
         </div>
     </div>
 
