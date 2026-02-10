@@ -62,7 +62,7 @@ const experiences = [
             "Proficiently soldered and tested circuit boards, ensuring a high degree of performance and reliability for various electronic applications, improving the team’s electrical systems",
             "Utilized Altium Designer to design PCB layouts, create component libraries, and develop schematics for various solar car electrical systems, contributing to system functionality and advancements"
         ],
-        companyLink: "https://www.blueskysolar.org/team",
+        companyLink: "https://www.blueskysolar.org",
         technologies: "PCB Design, Altium Designer, Soldering",
         showcase: true
     },
