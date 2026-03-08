@@ -12,7 +12,7 @@ const projects = [
         image: findashLogo,
         projectLink: "https://findash.dev/",
         technologies: "Next.js, Supabase, PostgreSQL, Vercel",
-        showcase: true
+        showcase: false
     },
     {
         title: "Distributed Key Value Store with Real Time Notifications",
