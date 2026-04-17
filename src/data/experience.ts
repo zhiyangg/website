@@ -8,10 +8,10 @@ import cadetsLogo from "../assets/imgs/experience/cadets.png";
 
 const experiences = [
     {
-        title: "Capstone Research Student",
+        title: "Global Wholesale Operations Research Student",
         company: "Scotiabank",
         date: "Sep 2025 - Present",
-        summary: "University capstone project conducted in collaboration with Scotiabank, focusing on cash break reconciliation in a real-world financial environment.",
+        summary: "Developed an AI-driven reconciliation agent to detect, escalate, and assist in resolving cash breaks within Scotiabank's financial systems, reducing manual investigation time and improving accuracy of discrepancy detection.",
         image: scotiabankLogo,
         responsibilities: [
             "Designing a Recon Agentic Tool to assist with cash break identification and reconciliation analysis.",
@@ -19,11 +19,11 @@ const experiences = [
             "Collaborating with Scotiabank stakeholders to define requirements, evaluate approaches, and document system trade-offs."
         ],
         companyLink: "https://www.scotiabank.com/ca/en/",
-        technologies: "Python, LLM Agents, Data Analysis, Systems Design",
+        technologies: "Javascript, Node.js, Machine Learning, Backend Development",
         showcase: true
     },
     {
-        title: "GPU Graphics Driver Validation & Debug Engineer",
+        title: "GPU Graphics Driver Validation & Debug Engineer Intern",
         company: "AMD",
         date: "May 2024 - Aug 2025",
         summary: "Responsible for system testing, automation, and telemetry in GPU driver validation. Work on regression testing, issue resolution, and automation to enhance efficiency in new OS releases.",
@@ -34,7 +34,7 @@ const experiences = [
             "Developed automation scripts to streamline testing workflows."
         ],
         companyLink: "https://www.amd.com",
-        technologies: "Python, PowerShell, Automation, Windows OS Testing",
+        technologies: "Systems Testing, Regression Testing, Debugging, C++",
         showcase: true
     },
     {
@@ -53,7 +53,7 @@ const experiences = [
         showcase: false
     },
     {
-        title: "Electrical Team",
+        title: "Electrical Team Member",
         company: "Blue Sky Solar Racing",
         date: "Sep 2022 - Sep 2023",
         summary: "Contributed to the design and testing of electrical systems for a solar-powered racing car. Worked with PCB layouts, soldering, and system optimization to enhance vehicle performance.",
@@ -62,8 +62,8 @@ const experiences = [
             "Proficiently soldered and tested circuit boards, ensuring a high degree of performance and reliability for various electronic applications, improving the team’s electrical systems",
             "Utilized Altium Designer to design PCB layouts, create component libraries, and develop schematics for various solar car electrical systems, contributing to system functionality and advancements"
         ],
-        companyLink: "https://www.blueskysolar.org/team",
-        technologies: "PCB Design, Altium Designer, Circuit Testing, Soldering",
+        companyLink: "https://www.blueskysolar.org",
+        technologies: "PCB Design, Altium Designer, Soldering",
         showcase: true
     },
     {
