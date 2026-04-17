@@ -8,10 +8,10 @@ import cadetsLogo from "../assets/imgs/experience/cadets.png";
 
 const experiences = [
     {
-        title: "Capstone Research Student",
+        title: "Global Wholesale Operations Research Student",
         company: "Scotiabank",
         date: "Sep 2025 - Present",
-        summary: "University capstone project conducted in collaboration with Scotiabank, focusing on cash break reconciliation in a real-world financial environment.",
+        summary: "Developed an AI-driven reconciliation agent to detect, escalate, and assist in resolving cash breaks within Scotiabank's financial systems, reducing manual investigation time and improving accuracy of discrepancy detection.",
         image: scotiabankLogo,
         responsibilities: [
             "Designing a Recon Agentic Tool to assist with cash break identification and reconciliation analysis.",
