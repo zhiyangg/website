@@ -8,6 +8,21 @@ import cadetsLogo from "../assets/imgs/experience/cadets.png";
 
 const experiences = [
     {
+        title: "Software Development Engineer 2",
+        company: "AMD",
+        date: "June 2026 - Present",
+        summary: "Design and implementation of validation and automation solutions that improve GPU driver quality, strengthen regression coverage, and increase release confidence across new platform and OS releases.",
+        image: amdLogo,
+        responsibilities: [
+            "Design and implement scalable validation workflows and automation tooling to improve test coverage, reliability, and engineering efficiency.",
+            "Develop and maintain systems that surface regressions earlier, accelerate debugging, and improve confidence in GPU driver releases.",
+            "Collaborate across engineering and validation teams to define technical requirements, evaluate trade-offs, and deliver durable solutions.",
+        ],
+        companyLink: "https://www.amd.com",
+        technologies: "Automation, Validation Infrastructure, GPU Drivers",
+        showcase: true
+    },
+    {
         title: "Global Wholesale Operations Research Student",
         company: "Scotiabank",
         date: "Sep 2025 - Present",
