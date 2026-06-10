@@ -25,7 +25,7 @@ const experiences = [
     {
         title: "Global Wholesale Operations Research Student",
         company: "Scotiabank",
-        date: "Sep 2025 - Present",
+        date: "Sep 2025 - Apr 2026",
         summary: "Developed an AI-driven reconciliation agent to detect, escalate, and assist in resolving cash breaks within Scotiabank's financial systems, reducing manual investigation time and improving accuracy of discrepancy detection.",
         image: scotiabankLogo,
         responsibilities: [
