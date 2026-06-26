@@ -1,0 +1,48 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Bio from "../components/Bio.astro";
+import Experience from "../components/Experience.astro";
+import Map from "../components/Map.astro";
+import Footer from "../components/Footer.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>Zhi Yang Chen</title>
+		<link rel="canonical" href={Astro.site} />
+
+		<meta property="og:title" content="Zhi Yang Chen" />
+		<meta property="og:url" content={Astro.site} />
+		<meta property="og:description" content="Software Development Engineer 2 @ AMD" />
+		<meta property="og:type" content="website" />
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Zhi Yang Chen" />
+		<meta name="twitter:description" content="Software Development Engineer 2 @ AMD" />
+
+		<script is:inline>
+			const stored = localStorage.getItem("theme");
+			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+			if (stored === "dark" || (!stored && prefersDark)) {
+				document.documentElement.classList.add("dark");
+			}
+		</script>
+	</head>
+	<body class="bg-stone-50 text-stone-800 dark:bg-slate-900 dark:text-slate-100">
+		<div class="fixed right-4 top-4 z-10">
+			<ThemeToggle />
+		</div>
+		<main class="mx-auto max-w-3xl">
+			<Header />
+			<Bio />
+			<Map />
+			<Experience />
+		</main>
+		<Footer />
+	</body>
+</html>
