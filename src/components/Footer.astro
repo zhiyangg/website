@@ -1,0 +1,12 @@
+---
+import { execSync } from "node:child_process";
+
+let lastUpdated: string;
+try {
+	lastUpdated = execSync("git log -1 --format=%cd --date=format:'%B %Y'").toString().trim();
+} catch {
+	lastUpdated = new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" });
+}
+---
+
+<footer class="py-10 text-center text-xs text-stone-400 dark:text-slate-500">Last updated: {lastUpdated}</footer>

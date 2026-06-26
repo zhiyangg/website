@@ -1,0 +1,76 @@
+---
+import "leaflet/dist/leaflet.css";
+import { locations, type OfficeLocation } from "../data/locations";
+---
+
+<section class="mx-auto max-w-2xl px-6 py-10">
+	<p class="mb-3 text-xs font-medium uppercase tracking-wide text-stone-400 dark:text-slate-500">Where I've worked, on a map</p>
+	<div id="gta-map" class="h-80 w-full rounded-lg border border-stone-200 dark:border-slate-700" data-locations={JSON.stringify(locations)}></div>
+</section>
+
+<script>
+	import L from "leaflet";
+
+	const el = document.getElementById("gta-map")!;
+	const locations = JSON.parse(el.dataset.locations ?? "[]") as OfficeLocation[];
+
+	const map = L.map(el, { scrollWheelZoom: false, zoomControl: false }).setView([43.74, -79.45], 10);
+
+	const ZoomControl = L.Control.extend({
+		options: { position: "topleft" },
+		onAdd() {
+			const container = L.DomUtil.create(
+				"div",
+				"flex flex-col overflow-hidden rounded-md border border-stone-300 bg-white shadow-sm dark:border-slate-600 dark:bg-slate-800",
+			);
+			const makeButton = (label: string, symbol: string, onClick: () => void) => {
+				const button = L.DomUtil.create(
+					"button",
+					"flex h-7 w-7 items-center justify-center text-base font-medium leading-none text-stone-700 hover:bg-stone-100 dark:text-slate-200 dark:hover:bg-slate-700",
+					container,
+				);
+				button.type = "button";
+				button.setAttribute("aria-label", label);
+				button.textContent = symbol;
+				L.DomEvent.on(button, "click", L.DomEvent.stop).on(button, "click", onClick);
+			};
+			makeButton("Zoom in", "+", () => map.zoomIn());
+			makeButton("Zoom out", "−", () => map.zoomOut());
+			L.DomEvent.disableClickPropagation(container);
+			L.DomEvent.disableScrollPropagation(container);
+			return container;
+		},
+	});
+	new ZoomControl().addTo(map);
+
+	const lightTiles = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
+	const darkTiles = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
+	const isDark = () => document.documentElement.classList.contains("dark");
+
+	const tileLayer = L.tileLayer(isDark() ? darkTiles : lightTiles, {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+		maxZoom: 19,
+	}).addTo(map);
+
+	new MutationObserver(() => tileLayer.setUrl(isDark() ? darkTiles : lightTiles)).observe(document.documentElement, {
+		attributes: true,
+		attributeFilter: ["class"],
+	});
+
+	const dotIcon = L.divIcon({
+		className: "",
+		html: '<span class="block h-3 w-3 rounded-full bg-blue-600 ring-2 ring-white"></span>',
+		iconSize: [12, 12],
+		iconAnchor: [6, 6],
+	});
+
+	const markers = locations.map((loc) =>
+		L.marker([loc.lat, loc.lng], { icon: dotIcon })
+			.addTo(map)
+			.bindPopup(`<strong>${loc.name}</strong><br/>${loc.role}`),
+	);
+
+	if (markers.length) {
+		map.fitBounds(L.featureGroup(markers).getBounds(), { padding: [32, 32] });
+	}
+</script>
