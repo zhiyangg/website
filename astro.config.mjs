@@ -1,12 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import sitemap from "@astrojs/sitemap";
-import icons from "astro-icon";
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-    integrations: [tailwind(), sitemap(), icons()],
-    site: 'https://zhiyangchen.dev',
-    base: '/',
+	site: "https://zhiyangchen.dev",
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });

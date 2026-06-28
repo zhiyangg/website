@@ -1,0 +1,31 @@
+---
+import githubIcon from "../assets/icons/github.svg?raw";
+import linkedinIcon from "../assets/icons/linkedin.svg?raw";
+import emailIcon from "../assets/icons/email.svg?raw";
+
+const chineseName = "陈治洋";
+
+const socials = [
+	{ label: "GitHub", href: "https://github.com/zhiyangg", icon: githubIcon },
+	{ label: "LinkedIn", href: "https://www.linkedin.com/in/zhiyangc/", icon: linkedinIcon },
+	{ label: "Email", href: "mailto:zhiyangchen003@gmail.com", icon: emailIcon },
+];
+---
+
+<header class="flex flex-col items-center gap-3 pt-20 pb-8 text-center">
+	<h1 class="text-3xl font-semibold tracking-tight text-stone-900 dark:text-slate-50">Zhi Yang Chen</h1>
+	<p class="text-sm font-normal text-stone-400 dark:text-slate-400">{chineseName}</p>
+	<p class="text-sm text-stone-500 dark:text-slate-400">Software Development Engineer 2 @ AMD</p>
+	<div class="flex items-center gap-4 pt-2">
+		{socials.map((social) => (
+			<a
+				href={social.href}
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label={social.label}
+				class="h-5 w-5 text-stone-400 transition hover:text-stone-600 dark:text-slate-500 dark:hover:text-slate-300 [&>svg]:h-full [&>svg]:w-full"
+				set:html={social.icon}
+			/>
+		))}
+	</div>
+</header>
