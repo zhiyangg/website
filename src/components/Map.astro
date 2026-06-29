@@ -3,9 +3,9 @@ import "leaflet/dist/leaflet.css";
 import { locations } from "../data/locations";
 ---
 
-<section class="mx-auto max-w-3xl px-6 py-10">
+<section class="mx-auto max-w-3xl px-6 py-8 sm:py-10">
 	<p class="mb-3 text-xs font-medium uppercase tracking-wide text-stone-400 dark:text-stone-500">Where I've worked, on a map</p>
-	<div id="gta-map" class="h-80 w-full rounded-lg border border-stone-200 dark:border-stone-700" data-locations={JSON.stringify(locations)}></div>
+	<div id="gta-map" class="h-72 w-full rounded-lg border border-stone-200 sm:h-80 lg:h-96 dark:border-stone-700" data-locations={JSON.stringify(locations)}></div>
 </section>
 
 <script>
@@ -15,7 +15,15 @@ import { locations } from "../data/locations";
 	const el = document.getElementById("gta-map")!;
 	const locations = JSON.parse(el.dataset.locations ?? "[]") as OfficeLocation[];
 
-	const map = L.map(el, { scrollWheelZoom: false, zoomControl: false, attributionControl: false }).setView([43.74, -79.45], 10);
+	// On touch devices, one-finger drag would hijack page scrolling, so disable
+	// panning there and let the zoom buttons handle interaction instead.
+	const isTouch = L.Browser.mobile;
+	const map = L.map(el, {
+		scrollWheelZoom: false,
+		zoomControl: false,
+		attributionControl: false,
+		dragging: !isTouch,
+	}).setView([43.74, -79.45], 10);
 	L.control.attribution({ prefix: false }).addTo(map);
 
 	const ZoomControl = L.Control.extend({
@@ -28,7 +36,7 @@ import { locations } from "../data/locations";
 			const makeButton = (label: string, symbol: string, onClick: () => void) => {
 				const button = L.DomUtil.create(
 					"button",
-					"flex h-7 w-7 items-center justify-center text-base font-medium leading-none text-stone-700 hover:bg-stone-100 dark:text-stone-200 dark:hover:bg-stone-700",
+					"flex h-9 w-9 items-center justify-center text-lg font-medium leading-none text-stone-700 hover:bg-stone-100 sm:h-7 sm:w-7 sm:text-base dark:text-stone-200 dark:hover:bg-stone-700",
 					container,
 				);
 				button.type = "button";
