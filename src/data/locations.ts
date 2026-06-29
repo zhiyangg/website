@@ -3,27 +3,27 @@ export type OfficeLocation = {
 	role: string;
 	lat: number;
 	lng: number;
+	current?: boolean;
 };
 
-// TODO: replace with real addresses/coordinates once provided.
-// Placeholder coordinates are approximate (Markham + downtown Toronto) just to seed the map.
 export const locations: OfficeLocation[] = [
 	{
-		name: "AMD — Building 1",
+		name: "AMD — Markham",
 		role: "Software Development Engineer 2",
-		lat: 43.8385,
-		lng: -79.3267,
+		lat: 43.8349051,
+		lng: -79.324215,
+		current: true,
 	},
 	{
-		name: "AMD — Building 2",
-		role: "GPU Driver Validation & Debug Engineer Intern",
-		lat: 43.836,
-		lng: -79.331,
+		name: "AMD — Markham",
+		role: "GPU Graphics Driver Validation & Debug Engineer Intern",
+		lat: 43.8388816,
+		lng: -79.3796933,
 	},
 	{
-		name: "Scotiabank — Downtown Toronto",
+		name: "Scotiabank — Toronto",
 		role: "Global Wholesale Operations Research Student",
-		lat: 43.6481,
-		lng: -79.3817,
+		lat: 43.6491113,
+		lng: -79.3799877,
 	},
 ];

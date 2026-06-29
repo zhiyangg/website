@@ -1,6 +1,6 @@
-# zhiyangchen.dev
+# My Personal Portfolio
 
-My personal site — built with [Astro](https://astro.build), live at [zhiyangchen.dev](https://zhiyangchen.dev).
+Live at [zhiyangchen.dev](https://zhiyangchen.dev)
 
 ## What's here
 
