@@ -13,9 +13,9 @@ const socials = [
 ---
 
 <header class="flex flex-col items-center gap-3 pt-20 pb-8 text-center">
-	<h1 class="text-3xl font-semibold tracking-tight text-stone-900 dark:text-slate-50">Zhi Yang Chen</h1>
-	<p class="text-sm font-normal text-stone-400 dark:text-slate-400">{chineseName}</p>
-	<p class="text-sm text-stone-500 dark:text-slate-400">Software Development Engineer 2 @ AMD</p>
+	<h1 class="text-3xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">Zhi Yang Chen</h1>
+	<p class="text-sm font-normal text-stone-400 dark:text-stone-400">{chineseName}</p>
+	<p class="text-sm text-stone-500 dark:text-stone-400">Software Development Engineer 2 @ AMD</p>
 	<div class="flex items-center gap-4 pt-2">
 		{socials.map((social) => (
 			<a
@@ -23,7 +23,7 @@ const socials = [
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label={social.label}
-				class="h-5 w-5 text-stone-400 transition hover:text-stone-600 dark:text-slate-500 dark:hover:text-slate-300 [&>svg]:h-full [&>svg]:w-full"
+				class="h-5 w-5 text-stone-400 transition hover:text-stone-600 dark:text-stone-500 dark:hover:text-stone-300 [&>svg]:h-full [&>svg]:w-full"
 				set:html={social.icon}
 			/>
 		))}

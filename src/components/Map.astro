@@ -3,9 +3,9 @@ import "leaflet/dist/leaflet.css";
 import { locations } from "../data/locations";
 ---
 
-<section class="mx-auto max-w-2xl px-6 py-10">
-	<p class="mb-3 text-xs font-medium uppercase tracking-wide text-stone-400 dark:text-slate-500">Where I've worked, on a map</p>
-	<div id="gta-map" class="h-80 w-full rounded-lg border border-stone-200 dark:border-slate-700" data-locations={JSON.stringify(locations)}></div>
+<section class="mx-auto max-w-3xl px-6 py-10">
+	<p class="mb-3 text-xs font-medium uppercase tracking-wide text-stone-400 dark:text-stone-500">Where I've worked, on a map</p>
+	<div id="gta-map" class="h-80 w-full rounded-lg border border-stone-200 dark:border-stone-700" data-locations={JSON.stringify(locations)}></div>
 </section>
 
 <script>
@@ -22,12 +22,12 @@ import { locations } from "../data/locations";
 		onAdd() {
 			const container = L.DomUtil.create(
 				"div",
-				"flex flex-col overflow-hidden rounded-md border border-stone-300 bg-white shadow-sm dark:border-slate-600 dark:bg-slate-800",
+				"flex flex-col overflow-hidden rounded-md border border-stone-300 bg-white shadow-sm dark:border-stone-600 dark:bg-stone-800",
 			);
 			const makeButton = (label: string, symbol: string, onClick: () => void) => {
 				const button = L.DomUtil.create(
 					"button",
-					"flex h-7 w-7 items-center justify-center text-base font-medium leading-none text-stone-700 hover:bg-stone-100 dark:text-slate-200 dark:hover:bg-slate-700",
+					"flex h-7 w-7 items-center justify-center text-base font-medium leading-none text-stone-700 hover:bg-stone-100 dark:text-stone-200 dark:hover:bg-stone-700",
 					container,
 				);
 				button.type = "button";
@@ -53,17 +53,13 @@ import { locations } from "../data/locations";
 		maxZoom: 19,
 	}).addTo(map);
 
-	new MutationObserver(() => tileLayer.setUrl(isDark() ? darkTiles : lightTiles)).observe(document.documentElement, {
-		attributes: true,
-		attributeFilter: ["class"],
-	});
-
-	const currentColor = "#2563eb";
-	const pastColor = "#94a3b8";
+	const currentColorLight = "#4f46e5";
+	const currentColorDark = "#a5b4fc";
+	const pastColor = "#a8a29e";
 
 	const makeIcon = (current?: boolean) => {
 		const size = current ? 16 : 10;
-		const color = current ? currentColor : pastColor;
+		const color = current ? (isDark() ? currentColorDark : currentColorLight) : pastColor;
 		return L.divIcon({
 			className: "",
 			html: `
@@ -89,11 +85,19 @@ import { locations } from "../data/locations";
 		} else {
 			marker.bindPopup(`<strong>${loc.name}</strong><br/>${loc.role}`);
 		}
-		return marker;
+		return { marker, loc };
+	});
+
+	new MutationObserver(() => {
+		tileLayer.setUrl(isDark() ? darkTiles : lightTiles);
+		markers.forEach(({ marker, loc }) => marker.setIcon(makeIcon(loc.current)));
+	}).observe(document.documentElement, {
+		attributes: true,
+		attributeFilter: ["class"],
 	});
 
 	if (markers.length) {
-		map.fitBounds(L.featureGroup(markers).getBounds(), {
+		map.fitBounds(L.featureGroup(markers.map(({ marker }) => marker)).getBounds(), {
 			paddingTopLeft: [32, 60],
 			paddingBottomRight: [32, 32],
 		});

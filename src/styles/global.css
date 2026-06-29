@@ -2,10 +2,29 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+	/* Nearly white, just enough warmth to avoid feeling clinical. */
+	--color-stone-50: #fdfdfc;
+	--color-stone-100: #f7f6f3;
+
+	/* Terracotta accent, replacing the generic Tailwind blue. */
+	--color-terracotta-400: #e0794b;
+	--color-terracotta-600: #c2552a;
+}
+
+body {
+	background-image: radial-gradient(circle, rgb(28 25 23 / 0.07) 1px, transparent 1px);
+	background-size: 24px 24px;
+}
+
+.dark body {
+	background-image: radial-gradient(circle, rgb(245 245 244 / 0.06) 1px, transparent 1px);
+}
+
 .leaflet-tooltip.location-tooltip {
 	border-radius: 0.5rem;
 	border: 1px solid #e7e5e4;
-	background: #ffffff;
+	background: #fdfdfc;
 	color: #292524;
 	font-family: inherit;
 	font-size: 0.75rem;
@@ -19,7 +38,7 @@
 }
 
 .dark .leaflet-tooltip.location-tooltip {
-	background: #1e293b;
-	color: #f1f5f9;
-	border-color: #334155;
+	background: #292524;
+	color: #f5f5f4;
+	border-color: #44403c;
 }
