@@ -1,8 +1,8 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro";
-import Bio from "../components/Bio.astro";
 import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
 import Map from "../components/Map.astro";
 import Footer from "../components/Footer.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
@@ -12,18 +12,33 @@ import ThemeToggle from "../components/ThemeToggle.astro";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>Zhi Yang Chen</title>
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<title>Zhi Yang Chen — Software Development Engineer 2 @ AMD</title>
+		<meta
+			name="description"
+			content="Personal site of Zhi Yang Chen — Software Development Engineer 2 at AMD, working on GPU driver validation and automation."
+		/>
 		<link rel="canonical" href={Astro.site} />
 
+		<meta property="og:site_name" content="Zhi Yang Chen" />
 		<meta property="og:title" content="Zhi Yang Chen" />
 		<meta property="og:url" content={Astro.site} />
-		<meta property="og:description" content="Software Development Engineer 2 @ AMD" />
+		<meta
+			property="og:description"
+			content="Personal site of Zhi Yang Chen — Software Development Engineer 2 at AMD, working on GPU driver validation and automation."
+		/>
 		<meta property="og:type" content="website" />
+		<meta property="og:image" content={new URL("/og.jpg", Astro.site)} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 
-		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Zhi Yang Chen" />
-		<meta name="twitter:description" content="Software Development Engineer 2 @ AMD" />
+		<meta
+			name="twitter:description"
+			content="Personal site of Zhi Yang Chen — Software Development Engineer 2 at AMD, working on GPU driver validation and automation."
+		/>
+		<meta name="twitter:image" content={new URL("/og.jpg", Astro.site)} />
 
 		<script is:inline>
 			const stored = localStorage.getItem("theme");
@@ -39,9 +54,9 @@ import ThemeToggle from "../components/ThemeToggle.astro";
 		</div>
 		<main class="mx-auto max-w-3xl">
 			<Header />
-			<Bio />
 			<Map />
 			<Experience />
+			<Education />
 		</main>
 		<Footer />
 	</body>

@@ -1,26 +1,26 @@
 # zhiyangchen.dev
 
-My personal website — a single-page site built with [Astro](https://astro.build).
+My personal site — built with [Astro](https://astro.build), live at [zhiyangchen.dev](https://zhiyangchen.dev).
 
-Live at [zhiyangchen.dev](https://zhiyangchen.dev).
+## What's here
 
-## What's on it
-
-- A "currently / previously" work timeline
-- An interactive map pinning the actual offices I've worked out of in the GTA
+- My work experience timeline
+- A map of the actual offices I've worked out of in the GTA
 - Light/dark mode
 
 ## Stack
 
-- [Astro](https://astro.build) — static site framework
-- [Tailwind CSS v4](https://tailwindcss.com) — styling
-- [Leaflet](https://leafletjs.com) — the map
+- [Astro](https://astro.build) for the site itself
+- [Tailwind CSS v4](https://tailwindcss.com) for styling
+- [Leaflet](https://leafletjs.com) for the map
 
-## Development
+## Running it locally
 
 ```sh
 npm install
-npm run dev      # start the dev server
-npm run build    # production build, output to dist/
-npm run preview  # preview the production build locally
+npm run dev      # dev server
+npm run build    # production build → dist/
+npm run preview  # preview the production build
 ```
+
+Pushes to `main` build and deploy automatically via GitHub Actions.
