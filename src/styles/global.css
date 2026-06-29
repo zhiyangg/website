@@ -21,6 +21,24 @@ body {
 	background-image: radial-gradient(circle, rgb(245 245 244 / 0.06) 1px, transparent 1px);
 }
 
+.leaflet-control-attribution {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	padding: 0px 3px;
+	font-size: 7px;
+	line-height: 1.4;
+	color: rgb(168 162 158 / 0.55);
+}
+
+.leaflet-control-attribution a {
+	color: inherit;
+}
+
+.dark .leaflet-control-attribution {
+	color: rgb(120 113 108 / 0.55);
+}
+
 .leaflet-tooltip.location-tooltip {
 	border-radius: 0.5rem;
 	border: 1px solid #e7e5e4;

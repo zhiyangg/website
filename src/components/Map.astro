@@ -15,7 +15,8 @@ import { locations } from "../data/locations";
 	const el = document.getElementById("gta-map")!;
 	const locations = JSON.parse(el.dataset.locations ?? "[]") as OfficeLocation[];
 
-	const map = L.map(el, { scrollWheelZoom: false, zoomControl: false }).setView([43.74, -79.45], 10);
+	const map = L.map(el, { scrollWheelZoom: false, zoomControl: false, attributionControl: false }).setView([43.74, -79.45], 10);
+	L.control.attribution({ prefix: false }).addTo(map);
 
 	const ZoomControl = L.Control.extend({
 		options: { position: "topleft" },
