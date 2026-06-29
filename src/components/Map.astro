@@ -1,6 +1,6 @@
 ---
 import "leaflet/dist/leaflet.css";
-import { locations, type OfficeLocation } from "../data/locations";
+import { locations } from "../data/locations";
 ---
 
 <section class="mx-auto max-w-2xl px-6 py-10">
@@ -10,6 +10,7 @@ import { locations, type OfficeLocation } from "../data/locations";
 
 <script>
 	import L from "leaflet";
+	import type { OfficeLocation } from "../data/locations";
 
 	const el = document.getElementById("gta-map")!;
 	const locations = JSON.parse(el.dataset.locations ?? "[]") as OfficeLocation[];
@@ -57,20 +58,44 @@ import { locations, type OfficeLocation } from "../data/locations";
 		attributeFilter: ["class"],
 	});
 
-	const dotIcon = L.divIcon({
-		className: "",
-		html: '<span class="block h-3 w-3 rounded-full bg-blue-600 ring-2 ring-white"></span>',
-		iconSize: [12, 12],
-		iconAnchor: [6, 6],
+	const currentColor = "#2563eb";
+	const pastColor = "#94a3b8";
+
+	const makeIcon = (current?: boolean) => {
+		const size = current ? 16 : 10;
+		const color = current ? currentColor : pastColor;
+		return L.divIcon({
+			className: "",
+			html: `
+				<span class="relative flex" style="width: ${size}px; height: ${size}px">
+					${current ? `<span class="absolute inline-flex h-full w-full animate-ping rounded-full opacity-50" style="background-color: ${color}"></span>` : ""}
+					<span class="relative block rounded-full ring-2 ring-white" style="width: ${size}px; height: ${size}px; background-color: ${color}"></span>
+				</span>
+			`,
+			iconSize: [size, size],
+			iconAnchor: [size / 2, size / 2],
+		});
+	};
+
+	const markers = locations.map((loc) => {
+		const marker = L.marker([loc.lat, loc.lng], { icon: makeIcon(loc.current) }).addTo(map);
+		if (loc.current) {
+			marker.bindTooltip(`<strong>${loc.name}</strong><br/>${loc.role}`, {
+				permanent: true,
+				direction: "top",
+				offset: [0, -12],
+				className: "location-tooltip",
+			});
+		} else {
+			marker.bindPopup(`<strong>${loc.name}</strong><br/>${loc.role}`);
+		}
+		return marker;
 	});
 
-	const markers = locations.map((loc) =>
-		L.marker([loc.lat, loc.lng], { icon: dotIcon })
-			.addTo(map)
-			.bindPopup(`<strong>${loc.name}</strong><br/>${loc.role}`),
-	);
-
 	if (markers.length) {
-		map.fitBounds(L.featureGroup(markers).getBounds(), { padding: [32, 32] });
+		map.fitBounds(L.featureGroup(markers).getBounds(), {
+			paddingTopLeft: [32, 60],
+			paddingBottomRight: [32, 32],
+		});
 	}
 </script>

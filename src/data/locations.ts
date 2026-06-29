@@ -3,6 +3,7 @@ export type OfficeLocation = {
 	role: string;
 	lat: number;
 	lng: number;
+	current?: boolean;
 };
 
 export const locations: OfficeLocation[] = [
@@ -11,6 +12,7 @@ export const locations: OfficeLocation[] = [
 		role: "Software Development Engineer 2",
 		lat: 43.8349051,
 		lng: -79.324215,
+		current: true,
 	},
 	{
 		name: "AMD — 1 Commerce Valley Dr E, Markham",
