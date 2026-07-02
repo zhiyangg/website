@@ -35,9 +35,6 @@ body {
 	color: inherit;
 }
 
-.dark .leaflet-control-attribution {
-	color: rgb(120 113 108 / 0.55);
-}
 
 .leaflet-tooltip.location-tooltip {
 	border-radius: 0.5rem;
