@@ -11,6 +11,28 @@ const title = "Zhi Yang Chen";
 const description =
 	"Personal site of Zhi Yang Chen — Software Development Engineer 2 at AMD, working on GPU driver validation and automation.";
 const ogImage = new URL("/og.jpg", Astro.site);
+
+// Structured data so name searches can surface role, employer, and profiles.
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	name: "Zhi Yang Chen",
+	alternateName: "陈治洋",
+	url: Astro.site,
+	jobTitle: "Software Development Engineer 2",
+	worksFor: {
+		"@type": "Organization",
+		name: "AMD",
+		url: "https://www.amd.com",
+	},
+	alumniOf: {
+		"@type": "CollegeOrUniversity",
+		name: "University of Toronto",
+		url: "https://www.utoronto.ca",
+	},
+	email: "mailto:zhiyangchen003@gmail.com",
+	sameAs: ["https://github.com/zhiyangg", "https://www.linkedin.com/in/zhiyangc/"],
+};
 ---
 
 <html lang="en">
@@ -18,6 +40,14 @@ const ogImage = new URL("/og.jpg", Astro.site);
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
+		<!-- Tints the browser UI around the page on phones; kept in sync with
+		     the theme by the scripts that toggle the dark class. -->
+		<meta name="theme-color" content="#fdfdfc" />
+
+		<!-- Warm up connections to the map tile CDN ({s} rotates a/b/c). -->
+		<link rel="preconnect" href="https://a.basemaps.cartocdn.com" />
+		<link rel="preconnect" href="https://b.basemaps.cartocdn.com" />
+		<link rel="preconnect" href="https://c.basemaps.cartocdn.com" />
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={Astro.site} />
@@ -36,6 +66,9 @@ const ogImage = new URL("/og.jpg", Astro.site);
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={ogImage} />
 
+		<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
 		<script is:inline>
 			// Mobile browsers restore the prior scroll offset on refresh by default;
 			// opt out so every load/refresh starts at the top.
@@ -48,6 +81,8 @@ const ogImage = new URL("/og.jpg", Astro.site);
 			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 			if (stored === "dark" || (!stored && prefersDark)) {
 				document.documentElement.classList.add("dark");
+				// stone-900, matching the dark body background
+				document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#1c1917");
 			}
 		</script>
 	</head>

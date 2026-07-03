@@ -4,20 +4,40 @@ import uoftIcon from "../assets/logos/uoft-icon.png";
 ---
 
 <section class="mx-auto max-w-3xl px-6 py-8 sm:py-10">
-	<p class="mb-3 text-xs font-medium uppercase tracking-wide text-stone-400 dark:text-stone-500">Education</p>
-	<a href="https://www.ece.utoronto.ca/" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-4">
-		<Image
-			src={uoftIcon}
-			alt="University of Toronto"
-			width={160}
-			class="mt-1 h-10 w-10 shrink-0 rounded-md object-contain"
-		/>
+	<h2 class="mb-3 text-xs font-medium uppercase tracking-wide text-stone-400 dark:text-stone-500">Education</h2>
+	<article class="flex items-start gap-4">
+		<a
+			href="https://www.ece.utoronto.ca/"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="University of Toronto"
+			class="shrink-0"
+		>
+			<Image
+				src={uoftIcon}
+				alt="University of Toronto"
+				width={160}
+				class="mt-1 h-10 w-10 rounded-md object-contain"
+			/>
+		</a>
 		<div class="flex-1">
-			<p class="font-medium text-stone-900 group-hover:text-terracotta-600 dark:text-stone-50 dark:group-hover:text-terracotta-400">
-				Computer Engineering
+			<h3 class="font-medium">
+				<a
+					href="https://www.ece.utoronto.ca/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-stone-900 transition hover:text-terracotta-600 dark:text-stone-50 dark:hover:text-terracotta-400"
+				>Computer Engineering</a>
+			</h3>
+			<p class="text-xs text-stone-400 dark:text-stone-500">
+				<a
+					href="https://www.ece.utoronto.ca/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="transition hover:text-terracotta-600 dark:hover:text-terracotta-400"
+				>University of Toronto</a> · 2021 - 2026
 			</p>
-			<p class="text-xs text-stone-400 dark:text-stone-500">University of Toronto · 2021 - 2026</p>
 			<p class="mt-1.5 text-sm leading-relaxed text-stone-600 dark:text-stone-300">Minor in Artificial Intelligence Engineering</p>
 		</div>
-	</a>
+	</article>
 </section>

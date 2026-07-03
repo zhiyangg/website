@@ -4,7 +4,7 @@ import { locations } from "../data/locations";
 ---
 
 <section class="mx-auto max-w-3xl px-6 py-8 sm:py-10">
-	<p class="mb-3 text-xs font-medium uppercase tracking-wide text-stone-400 dark:text-stone-500">Where I've worked</p>
+	<h2 class="mb-3 text-xs font-medium uppercase tracking-wide text-stone-400 dark:text-stone-500">Where I've worked</h2>
 	<div id="gta-map" class="h-72 w-full rounded-lg border border-stone-200 sm:h-80 lg:h-96 dark:border-stone-700" data-locations={JSON.stringify(locations)}></div>
 </section>
 
@@ -71,19 +71,24 @@ import { locations } from "../data/locations";
 
 	const makeIcon = (current?: boolean) => {
 		const size = current ? 16 : 10;
+		// The clickable area extends past the visible dot so markers are easy
+		// to tap on touch screens; the dot stays centered, so anchors align.
+		const hitSize = 28;
 		const dark = isDark();
 		const color = current ? (dark ? currentColorDark : currentColorLight) : pastColor;
 		const ringColor = dark ? ringColorDark : ringColorLight;
 		return L.divIcon({
 			className: "",
 			html: `
-				<span class="relative flex" style="width: ${size}px; height: ${size}px">
-					${current ? `<span class="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" style="background-color: ${color}"></span>` : ""}
-					<span class="relative block rounded-full ring-2" style="width: ${size}px; height: ${size}px; background-color: ${color}; --tw-ring-color: ${ringColor}"></span>
+				<span class="flex items-center justify-center" style="width: ${hitSize}px; height: ${hitSize}px">
+					<span class="relative flex" style="width: ${size}px; height: ${size}px">
+						${current ? `<span class="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 motion-reduce:animate-none" style="background-color: ${color}"></span>` : ""}
+						<span class="relative block rounded-full ring-2" style="width: ${size}px; height: ${size}px; background-color: ${color}; --tw-ring-color: ${ringColor}"></span>
+					</span>
 				</span>
 			`,
-			iconSize: [size, size],
-			iconAnchor: [size / 2, size / 2],
+			iconSize: [hitSize, hitSize],
+			iconAnchor: [hitSize / 2, hitSize / 2],
 		});
 	};
 
@@ -101,6 +106,14 @@ import { locations } from "../data/locations";
 		}
 		return { marker, loc };
 	});
+
+	// Hide the current location's permanent tooltip while a past location's
+	// popup is open, so the two never stack; restore it once the popup closes.
+	const currentMarker = markers.find(({ loc }) => loc.current)?.marker;
+	if (currentMarker) {
+		map.on("popupopen", () => currentMarker.closeTooltip());
+		map.on("popupclose", () => currentMarker.openTooltip());
+	}
 
 	new MutationObserver(() => {
 		tileLayer.setUrl(isDark() ? darkTiles : lightTiles);

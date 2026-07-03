@@ -57,3 +57,42 @@ body {
 	color: #f5f5f4;
 	border-color: #44403c;
 }
+
+/* Past-location popups (bindPopup) ship with Leaflet's stock white styles;
+   restyle them to match the location tooltip in both themes. */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+	background: #fdfdfc;
+	color: #292524;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 0.06);
+}
+
+.leaflet-popup-content-wrapper {
+	border-radius: 0.5rem;
+	border: 1px solid #e7e5e4;
+}
+
+.leaflet-popup-content {
+	font-family: inherit;
+	font-size: 0.75rem;
+	line-height: 1.35;
+	margin: 8px 26px 8px 12px;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+	color: #a8a29e;
+}
+
+.dark .leaflet-popup-content-wrapper,
+.dark .leaflet-popup-tip {
+	background: #292524;
+	color: #f5f5f4;
+}
+
+.dark .leaflet-popup-content-wrapper {
+	border-color: #44403c;
+}
+
+.dark .leaflet-container a.leaflet-popup-close-button {
+	color: #78716c;
+}

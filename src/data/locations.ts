@@ -7,6 +7,8 @@ export type OfficeLocation = {
 };
 
 export const locations: OfficeLocation[] = [
+	// AMD has two Markham offices; the full-time role and the internship
+	// are in different buildings, hence the two nearby pins.
 	{
 		name: "AMD — Markham",
 		role: "Software Development Engineer 2",
