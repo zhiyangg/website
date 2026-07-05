@@ -4,6 +4,7 @@ import linkedinIcon from "../assets/icons/linkedin.svg?raw";
 import emailIcon from "../assets/icons/email.svg?raw";
 
 const chineseName = "陈治洋";
+const role = "Software Development Engineer 2 @ AMD";
 
 const socials = [
 	{ label: "GitHub", href: "https://github.com/zhiyangg", icon: githubIcon },
@@ -15,7 +16,12 @@ const socials = [
 <header class="flex flex-col items-center gap-3 px-6 pt-16 pb-8 text-center sm:pt-20">
 	<h1 class="text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl dark:text-stone-50">Zhi Yang Chen</h1>
 	<p class="text-sm font-normal text-stone-400 dark:text-stone-400">{chineseName}</p>
-	<p class="text-sm text-stone-500 dark:text-stone-400">Software Development Engineer 2 @ AMD</p>
+	<p class="text-sm text-stone-500 dark:text-stone-400">
+		<span class="typed-wrap">
+			<span class="typed-ghost" aria-hidden="true">{role}</span>
+			<span id="typed-role" class="typed-reveal">{role}</span>
+		</span>
+	</p>
 	<div class="flex items-center gap-4 pt-2">
 		{socials.map((social) => (
 			<a
@@ -29,3 +35,68 @@ const socials = [
 		))}
 	</div>
 </header>
+
+<style>
+	/* An invisible copy of the text sets the final width up front, so the
+	   line never shifts; the visible copy wipes across it left to right. */
+	.typed-wrap {
+		display: inline-grid;
+	}
+
+	.typed-ghost,
+	.typed-reveal {
+		grid-area: 1 / 1;
+		white-space: nowrap;
+	}
+
+	.typed-ghost {
+		visibility: hidden;
+	}
+
+	.typed-reveal {
+		width: 0;
+		overflow: hidden;
+		justify-self: start;
+		border-right: 1px solid currentColor;
+		animation:
+			typed-reveal 1.8s steps(120, end) 0.6s forwards,
+			cursor-blink 0.8s step-end infinite;
+	}
+
+	/* Added by script a moment after typing finishes. */
+	.typed-reveal.done {
+		border-right-color: transparent;
+	}
+
+	@keyframes typed-reveal {
+		to {
+			width: 100%;
+		}
+	}
+
+	@keyframes cursor-blink {
+		50% {
+			border-right-color: transparent;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.typed-reveal {
+			width: auto;
+			border-right: none;
+			animation: none;
+		}
+	}
+</style>
+
+<!-- The animation itself is pure CSS; this only retires the cursor afterwards. -->
+<script is:inline>
+	(() => {
+		const el = document.getElementById("typed-role");
+		if (!el) return;
+		el.addEventListener("animationend", (event) => {
+			if (event.animationName !== "typed-reveal") return;
+			setTimeout(() => el.classList.add("done"), 4000);
+		});
+	})();
+</script>
