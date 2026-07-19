@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+import ThemeToggle from "../components/ThemeToggle.astro";
+
+interface Props {
+	title: string;
+	description?: string;
+	robots?: string;
+}
+
+const { title, description, robots } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<!-- Tints the browser UI around the page on phones; kept in sync with
+		     the theme by the scripts that toggle the dark class. -->
+		<meta name="theme-color" content="#fdfdfc" />
+		<title>{title}</title>
+		{description && <meta name="description" content={description} />}
+		{robots && <meta name="robots" content={robots} />}
+
+		<!-- Page-specific head tags (canonical, Open Graph, JSON-LD, preconnects). -->
+		<slot name="head" />
+
+		<script is:inline>
+			const stored = localStorage.getItem("theme");
+			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+			if (stored === "dark" || (!stored && prefersDark)) {
+				document.documentElement.classList.add("dark");
+				// stone-900, matching the dark body background
+				document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#1c1917");
+			}
+		</script>
+	</head>
+	<body class="bg-stone-50 text-stone-800 dark:bg-stone-900 dark:text-stone-100">
+		<div class="fixed right-4 top-4 z-10">
+			<ThemeToggle />
+		</div>
+		<slot />
+	</body>
+</html>

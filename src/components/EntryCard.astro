@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+	href: string;
+	logo: ImageMetadata;
+	logoWidth: number;
+	// Optional: pass only width for non-square logos so Astro derives the
+	// height from the source aspect ratio instead of distorting it.
+	logoHeight?: number;
+	title: string;
+	// The linked organization/school name shown in the subtitle line.
+	subtitle: string;
+	date: string;
+	summary: string;
+	technologies?: string[];
+	// A small section label above the title (e.g. "Currently"), with its own
+	// colour classes; omitted when the entry sits under a shared heading.
+	label?: string;
+	labelClass?: string;
+	class?: string;
+}
+
+const { href, logo, logoWidth, logoHeight, title, subtitle, date, summary, technologies, label, labelClass, class: className } = Astro.props;
+---
+
+<article class:list={["flex items-start gap-4", className]}>
+	<a href={href} target="_blank" rel="noopener noreferrer" aria-label={subtitle} class="shrink-0">
+		<Image
+			src={logo}
+			alt={subtitle}
+			width={logoWidth}
+			height={logoHeight}
+			class="mt-1 h-10 w-10 rounded-md object-contain"
+		/>
+	</a>
+	<div class="flex-1">
+		{label && (
+			<h2 class:list={["mb-1 text-xs font-medium uppercase tracking-wide", labelClass]}>{label}</h2>
+		)}
+		<h3 class="font-medium">
+			<a
+				href={href}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="text-stone-900 transition hover:text-terracotta-600 dark:text-stone-50 dark:hover:text-terracotta-400"
+			>{title}</a>
+		</h3>
+		<p class="text-xs text-stone-400 dark:text-stone-500">
+			<a
+				href={href}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="transition hover:text-terracotta-600 dark:hover:text-terracotta-400"
+			>{subtitle}</a> · {date}
+		</p>
+		<p class="mt-1.5 text-sm leading-relaxed text-stone-600 dark:text-stone-300">{summary}</p>
+		{technologies && technologies.length > 0 && (
+			<p class="mt-1.5 text-xs text-stone-400 dark:text-stone-500">{technologies.join(", ")}</p>
+		)}
+	</div>
+</article>

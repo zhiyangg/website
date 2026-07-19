@@ -1,43 +1,21 @@
 ---
-import { Image } from "astro:assets";
+import EntryCard from "./EntryCard.astro";
 import uoftIcon from "../assets/logos/uoft-icon.png";
 ---
 
 <section class="mx-auto max-w-3xl px-6 py-8 sm:py-10">
 	<h2 class="mb-3 text-xs font-medium uppercase tracking-wide text-stone-400 dark:text-stone-500">Education</h2>
-	<article class="flex items-start gap-4">
-		<a
-			href="https://www.ece.utoronto.ca/"
-			target="_blank"
-			rel="noopener noreferrer"
-			aria-label="University of Toronto"
-			class="shrink-0"
-		>
-			<Image
-				src={uoftIcon}
-				alt="University of Toronto"
-				width={160}
-				class="mt-1 h-10 w-10 rounded-md object-contain"
-			/>
-		</a>
-		<div class="flex-1">
-			<h3 class="font-medium">
-				<a
-					href="https://www.ece.utoronto.ca/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="text-stone-900 transition hover:text-terracotta-600 dark:text-stone-50 dark:hover:text-terracotta-400"
-				>Computer Engineering</a>
-			</h3>
-			<p class="text-xs text-stone-400 dark:text-stone-500">
-				<a
-					href="https://www.ece.utoronto.ca/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="transition hover:text-terracotta-600 dark:hover:text-terracotta-400"
-				>University of Toronto</a> · 2021 - 2026
-			</p>
-			<p class="mt-1.5 text-sm leading-relaxed text-stone-600 dark:text-stone-300">Minor in Artificial Intelligence Engineering</p>
-		</div>
-	</article>
+	<!-- The UofT logo is portrait (195×373), not square like the other logos, so
+	     we pass only logoWidth and let Astro derive the height from the source
+	     aspect ratio — forcing a square height would distort the generated image.
+	     object-contain then fits it into the h-10 w-10 box. Leave height off. -->
+	<EntryCard
+		href="https://www.ece.utoronto.ca/"
+		logo={uoftIcon}
+		logoWidth={160}
+		title="Computer Engineering"
+		subtitle="University of Toronto"
+		date="2021 - 2026"
+		summary="Minor in Artificial Intelligence Engineering"
+	/>
 </section>

@@ -1,40 +1,16 @@
 ---
-import "../styles/global.css";
-import ThemeToggle from "../components/ThemeToggle.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<title>Page not found — Zhi Yang Chen</title>
-		<meta name="robots" content="noindex" />
-		<meta name="theme-color" content="#fdfdfc" />
-
-		<script is:inline>
-			const stored = localStorage.getItem("theme");
-			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-			if (stored === "dark" || (!stored && prefersDark)) {
-				document.documentElement.classList.add("dark");
-				// stone-900, matching the dark body background
-				document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#1c1917");
-			}
-		</script>
-	</head>
-	<body class="bg-stone-50 text-stone-800 dark:bg-stone-900 dark:text-stone-100">
-		<div class="fixed right-4 top-4 z-10">
-			<ThemeToggle />
-		</div>
-		<main class="flex min-h-screen flex-col items-center justify-center gap-3 px-6 text-center">
-			<h1 class="text-5xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">404</h1>
-			<p class="text-sm text-stone-500 dark:text-stone-400">This page doesn't exist.</p>
-			<a
-				href="/"
-				class="pt-2 text-sm font-medium text-terracotta-600 hover:underline dark:text-terracotta-400"
-			>
-				Back home →
-			</a>
-		</main>
-	</body>
-</html>
+<Layout title="Page not found — Zhi Yang Chen" robots="noindex">
+	<main class="flex min-h-screen flex-col items-center justify-center gap-3 px-6 text-center">
+		<h1 class="text-5xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">404</h1>
+		<p class="text-sm text-stone-500 dark:text-stone-400">This page doesn't exist.</p>
+		<a
+			href="/"
+			class="pt-2 text-sm font-medium text-terracotta-600 hover:underline dark:text-terracotta-400"
+		>
+			Back home →
+		</a>
+	</main>
+</Layout>

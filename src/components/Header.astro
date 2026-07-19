@@ -57,6 +57,10 @@ const socials = [
 		width: 0;
 		overflow: hidden;
 		justify-self: start;
+		/* content-box so the 1px cursor border sits outside the width, instead
+		   of eating into it (Tailwind sets box-sizing: border-box globally) and
+		   clipping the last glyph once the reveal animates to width: 100%. */
+		box-sizing: content-box;
 		border-right: 1px solid currentColor;
 		animation:
 			typed-reveal 1.8s steps(120, end) 0.6s forwards,

@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import EntryCard from "./EntryCard.astro";
 import { current, previous } from "../data/experience";
 
 const entries = [{ ...current, label: "Currently" }, ...previous.map((p) => ({ ...p, label: "Previously" }))];
@@ -7,52 +7,28 @@ const entries = [{ ...current, label: "Currently" }, ...previous.map((p) => ({ .
 
 <section class="mx-auto max-w-3xl px-6 py-8 sm:py-10">
 	<div class="flex flex-col divide-y divide-stone-200 dark:divide-stone-700">
-		{entries.map((entry, i) => (
-			<article class="flex items-start gap-4 py-6 first:pt-0 last:pb-0">
-				<a
+		{entries.map((entry, i) => {
+			// Show the group label only on the first entry of each run, so
+			// "Currently" and "Previously" each appear once.
+			const showLabel = i === 0 || entries[i - 1].label !== entry.label;
+			return (
+				<EntryCard
 					href={entry.companyLink}
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label={entry.company}
-					class="shrink-0"
-				>
-					<Image
-						src={entry.logo}
-						alt={entry.company}
-						width={80}
-						height={80}
-						class="mt-1 h-10 w-10 rounded-md object-contain"
-					/>
-				</a>
-				<div class="flex-1">
-					{(i === 0 || entries[i - 1].label !== entry.label) && (
-						<h2 class:list={[
-							"mb-1 text-xs font-medium uppercase tracking-wide",
-							entry.label === "Currently"
-								? "text-indigo-600 dark:text-indigo-300"
-								: "text-stone-400 dark:text-stone-500",
-						]}>{entry.label}</h2>
-					)}
-					<h3 class="font-medium">
-						<a
-							href={entry.companyLink}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="text-stone-900 transition hover:text-terracotta-600 dark:text-stone-50 dark:hover:text-terracotta-400"
-						>{entry.title}</a>
-					</h3>
-					<p class="text-xs text-stone-400 dark:text-stone-500">
-						<a
-							href={entry.companyLink}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="transition hover:text-terracotta-600 dark:hover:text-terracotta-400"
-						>{entry.company}</a> · {entry.date}
-					</p>
-					<p class="mt-1.5 text-sm leading-relaxed text-stone-600 dark:text-stone-300">{entry.summary}</p>
-					<p class="mt-1.5 text-xs text-stone-400 dark:text-stone-500">{entry.technologies.join(", ")}</p>
-				</div>
-			</article>
-		))}
+					logo={entry.logo}
+					logoWidth={80}
+					logoHeight={80}
+					title={entry.title}
+					subtitle={entry.company}
+					date={entry.date}
+					summary={entry.summary}
+					technologies={entry.technologies}
+					label={showLabel ? entry.label : undefined}
+					labelClass={entry.label === "Currently"
+						? "text-indigo-600 dark:text-indigo-300"
+						: "text-stone-400 dark:text-stone-500"}
+					class="py-6 first:pt-0 last:pb-0"
+				/>
+			);
+		})}
 	</div>
 </section>
