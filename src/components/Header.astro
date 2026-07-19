@@ -61,6 +61,12 @@ const socials = [
 		   of eating into it (Tailwind sets box-sizing: border-box globally) and
 		   clipping the last glyph once the reveal animates to width: 100%. */
 		box-sizing: content-box;
+		/* A sliver of slack past the ghost's advance width: the final "D" paints a
+		   fraction wider than it advances, and at fractional device-pixel ratios
+		   width: 100% rounds down — either one clips the glyph under overflow:
+		   hidden. Only the reveal gets this, so the grid column (and therefore the
+		   centered line) still measures exactly the ghost. */
+		padding-right: 2px;
 		border-right: 1px solid currentColor;
 		animation:
 			typed-reveal 1.8s steps(120, end) 0.6s forwards,
