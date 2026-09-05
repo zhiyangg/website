@@ -53,8 +53,9 @@ import { locations } from "../data/locations";
 	});
 	new ZoomControl().addTo(map);
 
-	const lightTiles = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-	const darkTiles = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
+	const cartoKey = import.meta.env.PUBLIC_CARTO_API_KEY;
+	const lightTiles = `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${cartoKey}`;
+	const darkTiles = `https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${cartoKey}`;
 	const isDark = () => document.documentElement.classList.contains("dark");
 
 	const tileLayer = L.tileLayer(isDark() ? darkTiles : lightTiles, {

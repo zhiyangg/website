@@ -22,6 +22,8 @@ jobs:
         with:
           package-manager: npm
           node-version: "22"
+        env:
+          PUBLIC_CARTO_API_KEY: ${{ secrets.PUBLIC_CARTO_API_KEY }}
 
   deploy:
     needs: build
