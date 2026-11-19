@@ -19,6 +19,10 @@ const { title, description, robots } = Astro.props;
 		<!-- Tints the browser UI around the page on phones; kept in sync with
 		     the theme by the scripts that toggle the dark class. -->
 		<meta name="theme-color" content="#fdfdfc" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- text= subsets the CJK face to just 陈治洋, so it costs a few KB. -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&text=%E9%99%88%E6%B2%BB%E6%B4%8B&display=swap" />
 		<title>{title}</title>
 		{description && <meta name="description" content={description} />}
 		{robots && <meta name="robots" content={robots} />}

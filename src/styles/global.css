@@ -10,6 +10,9 @@
 	/* Custom terracotta accent (not part of Tailwind's default palette). */
 	--color-terracotta-400: #e0794b;
 	--color-terracotta-600: #c2552a;
+
+	/* Serif CJK face used only for the Chinese name (3-glyph subset loaded in Layout.astro). */
+	--font-cjk: "Noto Serif SC", "Songti SC", serif;
 }
 
 :root {

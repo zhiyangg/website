@@ -59,7 +59,7 @@ Consistency matters — this is a portfolio. Match these exactly.
 - Muted text (headings, meta, dates): `text-stone-400 dark:text-stone-500`. Summaries: `text-stone-600 dark:text-stone-300`.
 - Map markers (hardcoded in `Map.astro`): current `#4f46e5` light / `#a5b4fc` dark; past `#a8a29e`; ring `#ffffff` light / `#1c1917` dark.
 
-**Typography** — default Tailwind sans stack (no custom font).
+**Typography** — default Tailwind sans stack. The one exception: the Chinese name (陈治洋) uses **Noto Serif SC** via `font-cjk`, loaded from Google Fonts in `Layout.astro` as a 3-glyph `text=` subset, letter-spaced with `tracking-[0.3em]`. If the Chinese name ever changes, update the URL-encoded `text=` parameter too.
 - Name (h1): `text-3xl font-semibold tracking-tight sm:text-4xl`.
 - Section headings: `text-xs font-medium uppercase tracking-wide` + muted color.
 - Entry title (h3): `font-medium`. Summary: `text-sm leading-relaxed`. Meta/date/tech: `text-xs`.
